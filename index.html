@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Einat Guedj, sites web</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Des sites avec réservation en ligne pour les indépendantes et les commerces, livrés en 7 jours, en cinq langues.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,800;0,900;1,800&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : esprit Bauhaus de la Ville Blanche. Grandes capitales grasses, arches orange à balcons, soleil pêche, bandes encre. Un seul univers clair, assumé. */
+:root{
+  --chaux:#fbf8f3; --chaux-2:#f3ede4; --orange:#ff6a2b; --orange-deep:#e8541a; --peche:#ffd5bf; --encre:#1e1b18; --gris:#6d655d; --trait:#e6ddd1;
+  --display:"Rubik", "Arial Black", system-ui, sans-serif;
+  --body:"Rubik", system-ui, sans-serif;
+  --mono:"DM Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--chaux)}
+body{background:var(--chaux);color:var(--encre);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.025em;line-height:.9;text-wrap:balance}
+h2{font-size:clamp(38px,6vw,76px)}
+h3{font-family:var(--display);font-weight:800;font-size:22px;line-height:1.15}
+.o{color:var(--orange)}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.in{max-width:1180px;margin:0 auto}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.kick::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--orange);flex:none}
+.lead{font-size:19px;color:var(--gris);max-width:52ch}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--encre);cursor:pointer;transition:transform .2s ease, background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-ink{background:var(--encre);color:var(--chaux)}
+.btn-line{background:transparent;color:var(--encre)}
+.btn-orange{background:var(--orange);border-color:var(--orange);color:#fff}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:900;font-size:20px;text-transform:uppercase;letter-spacing:-.01em;text-decoration:none}
+.logo i{width:26px;height:30px;border-radius:13px 13px 0 0;background:var(--orange);display:block;position:relative;overflow:hidden}
+.logo i::after{content:"";position:absolute;left:0;right:0;top:58%;height:3px;background:var(--chaux);box-shadow:0 7px 0 var(--chaux)}
+.links{display:flex;gap:26px;font-size:15px;font-weight:500}
+.links a{text-decoration:none}
+.links a:hover{color:var(--orange)}
+
+/* héros */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:36px 72px}
+.hero-copy{display:grid;gap:28px;min-width:0}
+.hero h1{font-size:clamp(52px,8.6vw,124px)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:0;flex-wrap:wrap;border-top:2px solid var(--encre)}
+.stats div{padding:16px 28px 0 0;margin-right:28px;display:grid;gap:2px;font-size:14px;color:var(--gris)}
+.stats b{font-family:var(--display);font-weight:900;font-size:28px;color:var(--encre);text-transform:uppercase;letter-spacing:-.02em;line-height:1}
+
+.compo{position:relative;aspect-ratio:1/1.08;width:100%;max-width:520px;justify-self:end}
+.arch{position:absolute;border-radius:999px 999px 0 0;background:var(--orange);overflow:hidden}
+.arch.big{left:14%;right:6%;top:6%;bottom:0}
+.arch .balc{position:absolute;left:-5%;right:-5%;height:4.5%;background:var(--chaux)}
+.sun{position:absolute;border-radius:50%;background:var(--peche)}
+.sun.s1{width:34%;aspect-ratio:1;left:30%;top:16%}
+.dot{position:absolute;width:13%;aspect-ratio:1;border-radius:50%;background:var(--encre);left:2%;top:46%}
+.half{position:absolute;width:26%;aspect-ratio:2/1;border-radius:999px 999px 0 0;background:var(--peche);left:0;bottom:0}
+.card-float{position:absolute;right:-2%;bottom:9%;background:var(--chaux);border:2px solid var(--encre);border-radius:20px;padding:14px 16px;display:grid;gap:8px;width:min(250px,62%);box-shadow:8px 8px 0 var(--encre);animation:rise .7s .4s both}
+.card-float .t{font-family:var(--mono);font-size:12px;color:var(--gris);text-transform:uppercase;letter-spacing:.06em}
+.card-float .slots{display:flex;gap:6px;flex-wrap:wrap}
+.card-float .slots span{font-family:var(--mono);font-size:12px;border:1.5px solid var(--encre);border-radius:999px;padding:3px 9px}
+.card-float .slots span.on{background:var(--orange);border-color:var(--orange);color:#fff}
+.card-float .ok{font-weight:700;font-size:14px}
+@keyframes rise{from{transform:translateY(14px)}to{transform:none}}
+
+/* bandeau langues */
+.marquee{background:var(--encre);color:var(--chaux);overflow:hidden;padding-block:18px;border-block:2px solid var(--encre)}
+.track{display:flex;gap:48px;width:max-content;animation:slide 28s linear infinite;font-family:var(--display);font-weight:900;font-size:clamp(22px,3vw,34px);text-transform:uppercase;letter-spacing:-.01em;white-space:nowrap}
+.track span{display:inline-flex;align-items:center;gap:48px}
+.track span::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--orange)}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track,.card-float{animation:none}}
+
+section{padding-block:96px}
+.head{display:grid;gap:18px;margin-bottom:48px;max-width:900px}
+
+/* avant après */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ba > div{border-radius:28px;padding:36px;display:grid;gap:18px;align-content:start;min-width:0}
+.before{border:2px dashed #cfc4b6}
+.after{background:var(--orange);color:#fff}
+.ba .lab{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.before .lab{color:var(--gris)}
+.bubble{background:var(--chaux-2);border-radius:20px 20px 20px 6px;padding:12px 16px;max-width:32ch;color:var(--gris);font-size:16px}
+.ba ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.ba li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+.ba li::before{content:"";width:12px;height:12px;border-radius:50%;margin-top:7px}
+.before li::before{border:2px solid #b9ad9e}
+.after li::before{background:#fff}
+
+/* réalisation */
+.work{background:var(--peche)}
+.work .in{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.window{border-radius:999px 999px 24px 24px;background:var(--orange);padding:28px 24px 24px;aspect-ratio:4/5;display:flex;align-items:flex-end;max-width:460px;width:100%;position:relative;overflow:hidden}
+.window::before{content:"";position:absolute;width:46%;aspect-ratio:1;border-radius:50%;background:var(--peche);left:27%;top:9%;opacity:.9}
+.mini{position:relative;background:var(--chaux);border-radius:20px;padding:20px;display:grid;gap:10px;width:100%;border:2px solid var(--encre)}
+.mini .langs{display:flex;gap:6px}
+.mini .langs span{font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:999px;border:1.5px solid var(--encre)}
+.mini .langs span:first-child{background:var(--encre);color:var(--chaux)}
+.mini .nm{font-family:var(--display);font-weight:900;font-size:26px;text-transform:uppercase;line-height:.95;letter-spacing:-.02em}
+.mini .row{display:flex;justify-content:space-between;font-size:14px;border-bottom:1.5px solid var(--trait);padding-bottom:6px}
+.mini .row span:last-child{font-family:var(--mono);font-size:13px}
+.mini .book{justify-self:start;background:var(--orange);color:#fff;border-radius:999px;padding:8px 16px;font-weight:700;font-size:13px}
+.work-copy{display:grid;gap:22px;min-width:0}
+.work-copy .lead{color:#5a4a3e}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips span{border:2px solid var(--encre);border-radius:999px;padding:6px 14px;font-weight:500;font-size:15px}
+
+/* offres */
+.launch{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:var(--encre);color:var(--chaux);border-radius:28px;padding:28px 32px;margin-bottom:24px}
+.launch h3{font-size:26px;text-transform:uppercase;font-weight:900;letter-spacing:-.01em}
+.launch p{color:#cfc6bb;font-size:16px}
+.launch .price{font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,64px);color:var(--orange);line-height:1}
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.offer{border:2px solid var(--encre);border-radius:180px 180px 28px 28px;padding:64px 30px 32px;display:grid;gap:18px;grid-template-rows:auto auto 1fr auto;text-align:center;background:var(--chaux);min-width:0}
+.offer.star{background:var(--orange);border-color:var(--orange);color:#fff}
+.offer .tag{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;min-height:1.3em}
+.offer .amount{font-family:var(--display);font-weight:900;font-size:56px;letter-spacing:-.03em;line-height:.95}
+.offer .amount small{display:block;font-size:15px;font-weight:500;letter-spacing:0;margin-top:6px;opacity:.8}
+.offer ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px;text-align:left;align-content:start}
+.offer li{padding-left:22px;position:relative}
+.offer li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:10px;border-radius:50%;background:var(--orange)}
+.offer.star li::before{background:#fff}
+.offer .delay{font-family:var(--mono);font-size:13px;border-top:2px solid currentColor;padding-top:14px}
+.options{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.option{background:var(--chaux-2);border-radius:28px;padding:26px 28px;display:grid;gap:8px;align-content:start;min-width:0}
+.option .p{font-family:var(--display);font-weight:800;font-size:22px}
+.option .p small{font-weight:500;font-size:14px;color:var(--gris)}
+.option p{color:var(--gris);font-size:15px}
+.note{margin-top:22px;font-size:14px;color:var(--gris)}
+
+/* étapes */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.steps::before{content:"";position:absolute;left:28px;right:28px;top:28px;height:2px;background:var(--encre)}
+.step{display:grid;gap:12px;align-content:start;position:relative;min-width:0}
+.step .n{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--chaux);border:2px solid var(--encre);font-family:var(--display);font-weight:900;font-size:22px}
+.step:last-child .n{background:var(--orange);border-color:var(--orange);color:#fff}
+.step .when{font-family:var(--mono);font-size:13px;color:var(--gris);text-transform:uppercase;letter-spacing:.06em}
+.step p{color:var(--gris);font-size:15px}
+
+/* à propos */
+.about .in{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.portrait{width:clamp(180px,24vw,260px);aspect-ratio:3/4;border-radius:999px 999px 0 0;background:var(--encre);position:relative;overflow:hidden;display:grid;place-items:center}
+.portrait::before{content:"";position:absolute;width:56%;aspect-ratio:1;border-radius:50%;background:var(--orange);top:16%}
+.portrait b{position:relative;font-family:var(--display);font-weight:900;font-size:64px;color:var(--chaux);margin-top:-18%}
+.portrait .balc{position:absolute;left:0;right:0;height:5%;background:var(--chaux)}
+.about-copy{display:grid;gap:20px;min-width:0}
+.langs-big{display:flex;gap:8px;flex-wrap:wrap}
+.langs-big span{background:var(--encre);color:var(--chaux);border-radius:999px;padding:7px 16px;font-weight:700;font-size:15px}
+.langs-big span:nth-child(odd){background:var(--orange)}
+
+/* faq */
+.faq{display:grid;gap:0;border-top:2px solid var(--encre);max-width:900px}
+details{border-bottom:2px solid var(--encre);padding-block:22px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--display);font-weight:700;font-size:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:500;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px;color:var(--gris);max-width:65ch}
+
+/* contact */
+.contact{background:var(--orange);color:#fff}
+.contact .in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact h2{color:var(--encre)}
+.contact .lead{color:#fff;opacity:.92}
+.contact-copy{display:grid;gap:24px;min-width:0}
+.coords{display:grid;gap:10px}
+.coord{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--encre);color:var(--chaux);border-radius:20px;padding:14px 18px;flex-wrap:wrap}
+.coord .k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#bdb3a7}
+.coord .v{font-weight:700;user-select:all;word-break:break-word}
+.copy{font:500 14px var(--body);border:1.5px solid var(--chaux);background:transparent;color:var(--chaux);border-radius:999px;padding:6px 14px;cursor:pointer}
+form{background:var(--chaux);color:var(--encre);border-radius:28px;padding:28px;display:grid;gap:14px;min-width:0;box-shadow:10px 10px 0 var(--encre)}
+label{display:grid;gap:6px;font-weight:500;font-size:14px}
+input,select,textarea{font:inherit;font-size:16px;padding:13px 16px;border-radius:14px;border:2px solid var(--trait);background:#fff;color:var(--encre);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--encre)}
+textarea{min-height:100px;resize:vertical}
+.out{display:grid;gap:10px}
+.out textarea{min-height:150px;font-size:15px}
+.out .copy{border-color:var(--encre);color:var(--encre);justify-self:start}
+.small{font-size:14px;color:var(--gris)}
+
+footer{background:var(--encre);color:#bdb3a7}
+footer .in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px;font-size:14px}
+footer b{color:var(--chaux);font-family:var(--display);text-transform:uppercase}
+
+@media (max-width:900px){
+  .hero,.work .in,.contact .in{grid-template-columns:1fr}
+  .compo{justify-self:center;max-width:440px}
+  .offers,.options,.ba{grid-template-columns:1fr}
+  .offer{border-radius:160px 160px 28px 28px}
+  .steps{grid-template-columns:1fr 1fr}
+  .steps::before{display:none}
+  .launch{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  section{padding-block:64px}
+  .links{display:none}
+  .steps{grid-template-columns:1fr}
+  .about .in{grid-template-columns:1fr}
+  .ba > div{padding:26px}
+  .stats div{padding-right:0;margin-right:22px}
+}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div class="band">
+  <div class="in">
+    <nav>
+      <a class="logo" href="#top"><i aria-hidden="true"></i>Einat Guedj</a>
+      <div class="links">
+        <a href="#realisation">Réalisation</a>
+        <a href="#offres">Offres</a>
+        <a href="#etapes">Méthode</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <span class="kick">Sites web pour indépendantes et commerces</span>
+        <h1>Des sites qui font <span class="o">réserver.</span></h1>
+        <p class="lead">Vos prestations, vos prix, vos photos et la prise de rendez-vous en ligne, sur une seule adresse à mettre dans votre bio. Fini les « dispo samedi ? » en messages privés.</p>
+        <div class="ctas">
+          <a class="btn btn-ink" href="#contact">Ma maquette offerte →</a>
+          <a class="btn btn-line" href="#offres">Voir les tarifs</a>
+        </div>
+        <div class="stats">
+          <div><b>7 jours</b>jusqu'à la mise en ligne</div>
+          <div><b>5 langues</b>FR · EN · HE · ES · IT</div>
+          <div><b>dès 490 €</b>sans abonnement imposé</div>
+        </div>
+      </div>
+
+      <div class="compo" role="img" aria-label="Composition graphique : une arche orange, un soleil et une réservation confirmée">
+        <div class="arch big">
+          <span class="balc" style="top:58%"></span>
+          <span class="balc" style="top:68%"></span>
+          <span class="balc" style="top:78%"></span>
+          <span class="balc" style="top:88%"></span>
+        </div>
+        <div class="sun s1"></div>
+        <div class="dot"></div>
+        <div class="half"></div>
+        <div class="card-float">
+          <span class="t">Réserver · mar. 4 nov.</span>
+          <div class="slots"><span>09:00</span><span class="on">10:30</span><span>14:00</span><span>17:00</span></div>
+          <span class="ok">Rendez-vous confirmé ✓</span>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+
+<div class="marquee" aria-label="Langues proposées : français, anglais, hébreu, espagnol, italien">
+  <div class="track" aria-hidden="true">
+    <span>Français</span><span>English</span><span>עברית</span><span>Español</span><span>Italiano</span>
+    <span>Français</span><span>English</span><span>עברית</span><span>Español</span><span>Italiano</span>
+  </div>
+</div>
+
+<section class="band">
+  <div class="in">
+    <div class="head">
+      <span class="kick">Avant / après</span>
+      <h2>Instagram vous fait connaître. <span class="o">Un site vous fait réserver.</span></h2>
+    </div>
+    <div class="ba">
+      <div class="before">
+        <span class="lab">Aujourd'hui</span>
+        <div class="bubble">Bonjour, vous avez de la place jeudi ? C'est combien le remplissage ?</div>
+        <ul>
+          <li>Vous répondez aux mêmes questions dix fois par jour.</li>
+          <li>Les clientes qui vous cherchent sur Google ne vous trouvent pas.</li>
+          <li>Vos tarifs sont perdus dans une story à la une.</li>
+        </ul>
+      </div>
+      <div class="after">
+        <span class="lab">Avec votre site</span>
+        <ul>
+          <li>Vos prestations, vos prix et vos photos sur une seule page.</li>
+          <li>La cliente choisit son créneau et reçoit sa confirmation.</li>
+          <li>Vous apparaissez sur Google et Google Maps dans votre quartier.</li>
+          <li>Un seul lien à mettre dans votre bio Instagram.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band work" id="realisation">
+  <div class="in">
+    <div class="window">
+      <div class="mini">
+        <div class="langs"><span>FR</span><span>EN</span><span>עב</span></div>
+        <div class="nm">SHEY Nails<br>&amp; Massages</div>
+        <div class="row"><span>Ongles</span><span>Tel-Aviv</span></div>
+        <div class="row"><span>Massages</span><span>sur réservation</span></div>
+        <span class="book">Réserver</span>
+      </div>
+    </div>
+    <div class="work-copy">
+      <span class="kick">Réalisation</span>
+      <h2>Le salon de Sheyna, à Tel-Aviv</h2>
+      <p class="lead">Un site en français, anglais et hébreu, avec la carte des soins, une galerie et la réservation en ligne. Ses clientes réservent dans leur langue, sans passer par les messages.</p>
+      <div class="chips"><span>Trilingue</span><span>Hébreu de droite à gauche</span><span>Réservation</span><span>Pensé pour le téléphone</span></div>
+      <div><a class="btn btn-ink" href="https://claude.ai/artifact/TCGm35czojjCXAPRrmmktj" target="_blank" rel="noopener">Voir le site de SHEY ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="offres">
+  <div class="in">
+    <div class="head">
+      <span class="kick">Offres et tarifs</span>
+      <h2>Trois formules. <span class="o">Des prix affichés.</span></h2>
+    </div>
+
+    <div class="launch">
+      <div><h3>Offre de lancement</h3><p>Site Pro + fiche Google, réservé aux 5 premières clientes.</p></div>
+      <div class="price">990 €</div>
+    </div>
+
+    <div class="offers">
+      <article class="offer">
+        <span class="tag">Pour démarrer</span>
+        <div><h3>Essentiel</h3></div>
+        <div>
+          <div class="amount">490 €<small>en une fois</small></div>
+        </div>
+        <ul>
+          <li>Une page complète : présentation, prestations et tarifs, galerie</li>
+          <li>Bouton WhatsApp ou Instagram</li>
+          <li>Adaptée au téléphone, mentions légales incluses</li>
+        </ul>
+        <span class="delay">En ligne en 5 jours</span>
+      </article>
+      <article class="offer star">
+        <span class="tag">Le plus choisi</span>
+        <div><h3>Pro</h3></div>
+        <div>
+          <div class="amount">790 €<small>jusqu'à 1 290 € selon les pages</small></div>
+        </div>
+        <ul>
+          <li>Plusieurs sections : soins, équipe, avis, accès</li>
+          <li>Réservation en ligne de vos créneaux</li>
+          <li>2 ou 3 langues au choix parmi 5</li>
+          <li>Référencement Google de base</li>
+        </ul>
+        <span class="delay">En ligne en 7 jours</span>
+      </article>
+      <article class="offer">
+        <span class="tag">L'esprit tranquille</span>
+        <div><h3>Suivi</h3></div>
+        <div>
+          <div class="amount">29 €<small>par mois, sans engagement</small></div>
+        </div>
+        <ul>
+          <li>Hébergement et nom de domaine</li>
+          <li>30 minutes de modifications par mois : prix, photos, horaires</li>
+          <li>1 mois de préavis pour arrêter</li>
+        </ul>
+        <span class="delay">Dès la mise en ligne</span>
+      </article>
+    </div>
+
+    <div class="options">
+      <div class="option"><h3>Fiche Google</h3><span class="p">150 € <small>puis 49 € / mois</small></span><p>Photos, horaires, services, réponses aux avis : vous ressortez sur Google Maps.</p></div>
+      <div class="option"><h3>Instagram</h3><span class="p">290 à 490 € <small>/ mois</small></span><p>Bio, stories à la une, 12 posts et leurs légendes préparés chaque mois.</p></div>
+      <div class="option"><h3>Maquette</h3><span class="p">Offerte</span><p>Je prépare votre page d'accueil à partir de votre Instagram. Vous décidez ensuite.</p></div>
+    </div>
+    <p class="note">Prix nets, TVA non applicable (article 293 B du CGI). 40 % d'acompte à la commande, le solde à la mise en ligne.</p>
+  </div>
+</section>
+
+<section class="band" id="etapes" style="background:var(--chaux-2)">
+  <div class="in">
+    <div class="head">
+      <span class="kick">Méthode</span>
+      <h2>De votre Instagram à <span class="o">votre site</span> en une semaine.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><span class="when">Jour 1</span><h3>On s'appelle</h3><p>15 minutes pour parler de vos prestations, de vos clientes et de vos couleurs.</p></div>
+      <div class="step"><span class="n">2</span><span class="when">Jours 2 et 3</span><h3>Votre maquette</h3><p>Je la construis avec vos photos et vos tarifs. Elle est offerte, même si vous n'allez pas plus loin.</p></div>
+      <div class="step"><span class="n">3</span><span class="when">Jours 4 à 6</span><h3>Vos retours</h3><p>Deux allers-retours de modifications sont inclus. On branche la réservation.</p></div>
+      <div class="step"><span class="n">4</span><span class="when">Jour 7</span><h3>En ligne</h3><p>Votre site est publié sur votre nom de domaine, et je vous montre comment l'utiliser.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band about">
+  <div class="in">
+    <div class="portrait" aria-hidden="true">
+      <b>E</b>
+      <span class="balc" style="bottom:22%"></span>
+      <span class="balc" style="bottom:11%"></span>
+    </div>
+    <div class="about-copy">
+      <span class="kick">Qui suis-je</span>
+      <h2>Einat, <span class="o">à Paris</span></h2>
+      <p class="lead">J'ai passé plusieurs années à organiser des projets pour de grandes entreprises. Aujourd'hui, je mets cette rigueur au service des indépendantes et des commerces de quartier, avec des outils d'intelligence artificielle qui me permettent de livrer vite et à prix juste.</p>
+      <p class="lead">Je livre des sites en français, anglais, hébreu, espagnol et italien.</p>
+      <div class="langs-big"><span>Français</span><span>English</span><span>עברית</span><span>Español</span><span>Italiano</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="in">
+    <div class="head">
+      <span class="kick">Questions fréquentes</span>
+      <h2>Ce qu'on me demande</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Je n'y connais rien en informatique, c'est un problème ?</summary><p>Non. Vous m'envoyez vos photos et vos tarifs, je m'occupe du reste. Pour changer un prix ou un horaire, un message suffit avec le Suivi.</p></details>
+      <details><summary>Le site m'appartient-il ?</summary><p>Oui. Le nom de domaine est à votre nom, et le site vous appartient dès le paiement complet.</p></details>
+      <details><summary>J'utilise déjà Planity ou un autre outil de réservation.</summary><p>Aucun souci : je relie votre site à l'outil que vous utilisez déjà. Sinon, je vous installe une solution gratuite.</p></details>
+      <details><summary>Combien coûte le site chaque mois ?</summary><p>Rien d'obligatoire. Le Suivi à 29 € par mois couvre l'hébergement, le nom de domaine et les petites modifications. Vous pouvez aussi tout gérer vous-même.</p></details>
+      <details><summary>Vous travaillez aussi à l'étranger ?</summary><p>Oui, entièrement à distance. Je crée des sites en français, anglais, hébreu, espagnol et italien, en France comme en Israël.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <div class="in">
+    <div class="contact-copy">
+      <span class="kick" style="color:#fff">Contact</span>
+      <h2>Votre maquette, <span style="color:#fff">offerte.</span></h2>
+      <p class="lead">Envoyez-moi le lien de votre Instagram ou de votre fiche Google. Je vous réponds sous 24 heures avec une première maquette.</p>
+      <div class="coords">
+        <div class="coord"><div><div class="k">WhatsApp</div><div class="v" id="v-phone">06 00 00 00 00</div></div><button class="copy" type="button" data-copy="v-phone">Copier</button></div>
+        <div class="coord"><div><div class="k">Email</div><div class="v" id="v-mail">contact@einatguedj.fr</div></div><button class="copy" type="button" data-copy="v-mail">Copier</button></div>
+      </div>
+    </div>
+
+    <form id="f" novalidate>
+      <label for="f-name">Votre prénom<input id="f-name" autocomplete="given-name"></label>
+      <label for="f-biz">Votre activité<input id="f-biz" placeholder="Onglerie, institut, coach…"></label>
+      <label for="f-link">Votre Instagram ou fiche Google<input id="f-link" placeholder="@votrecompte"></label>
+      <label for="f-offer">Ce qui vous intéresse
+        <select id="f-offer">
+          <option>Maquette offerte</option>
+          <option>Offre de lancement à 990 €</option>
+          <option>Site Essentiel</option>
+          <option>Site Pro</option>
+          <option>Fiche Google ou Instagram</option>
+        </select>
+      </label>
+      <label for="f-msg">Un mot sur votre projet<textarea id="f-msg"></textarea></label>
+      <button class="btn btn-ink" type="submit">Préparer mon message →</button>
+      <div class="out" id="out" hidden>
+        <p class="small">Votre message est prêt. Copiez-le et envoyez-le par WhatsApp ou par email.</p>
+        <textarea id="f-out" readonly></textarea>
+        <button class="copy" type="button" id="copy-out">Copier le message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="in">
+    <span><b>Einat Guedj</b> · création de sites web</span>
+    <span>Paris · à distance · SIRET en cours d'attribution</span>
+  </div>
+</footer>
+
+<script>
+function copyText(text, btn){
+  const label = btn.textContent;
+  const done = () => { btn.textContent = "Copié"; setTimeout(() => btn.textContent = label, 1500); };
+  try { navigator.clipboard.writeText(text).then(done, () => btn.textContent = "Sélectionnez le texte"); }
+  catch (e) { btn.textContent = "Sélectionnez le texte"; }
+}
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", () => copyText(document.getElementById(b.dataset.copy).textContent.trim(), b)));
+const f = document.getElementById("f"), out = document.getElementById("out"), fo = document.getElementById("f-out");
+f.addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  fo.value = `Bonjour Einat, je suis ${v("f-name") || "…"}` + (v("f-biz") ? ` (${v("f-biz")})` : "") + `.\n` +
+    `Je suis intéressée par : ${v("f-offer")}.\n` +
+    (v("f-link") ? `Mon compte : ${v("f-link")}\n` : "") +
+    (v("f-msg") ? `${v("f-msg")}\n` : "") + `Merci !`;
+  out.hidden = false; fo.focus(); fo.select();
+});
+document.getElementById("copy-out").addEventListener("click", e => { fo.select(); copyText(fo.value, e.currentTarget); });
+</script>
+
+</body>
+</html>
