@@ -206,6 +206,15 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 16px;border-radiu
 input:focus,select:focus,textarea:focus{border-color:var(--encre)}
 textarea{min-height:100px;resize:vertical}
 .small{font-size:14px;color:var(--gris)}
+.rdv{padding-bottom:0}
+.cal-box{background:#fff;border:1px solid var(--trait);border-radius:28px;padding:18px;box-shadow:0 30px 60px -30px rgba(90,60,40,.25)}
+.booking{border-radius:16px;overflow:auto}
+.booking:has(iframe){min-height:520px;max-height:min(640px,78vh);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.booking-hint{margin:10px 4px 0;font-size:14px;color:var(--gris);display:none}
+.cal-box:has(#booking iframe) .booking-hint{display:block}
+.booking-wait{color:var(--gris);padding:24px 6px}
+@media (max-width:560px){.cal-box{padding:10px;border-radius:20px}}
+
 
 footer{background:var(--chaux-2);color:var(--gris)}
 footer .in{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:20px 8px;font-size:13px}
@@ -260,7 +269,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
         <p class="lead">Vos prestations, vos prix, vos photos et la prise de rendez-vous en ligne, sur une seule adresse à mettre dans votre bio. Fini les « dispo samedi ? » en messages privés.</p>
         <div class="ctas">
           <a class="btn btn-ink" href="#contact">Ma maquette offerte →</a>
-          <a class="btn btn-line" href="https://cal.com/einatguedj/site-web" target="_blank" rel="noopener">Réserver un appel de 20 min</a>
+          <a class="btn btn-line" href="#rdv">Réserver un appel de 20 min</a>
         </div>
         <div class="stats">
           <div><b>7 jours</b>jusqu'à la mise en ligne</div>
@@ -356,7 +365,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <h2>De votre Instagram à <span class="o">votre site</span> en une semaine.</h2>
     </div>
     <div class="steps">
-      <div class="step"><span class="n">1</span><span class="when">Jour 1</span><h3>On s'appelle</h3><p>20 minutes en visio pour parler de vos prestations, de votre clientèle et de vos couleurs. <a href="https://cal.com/einatguedj/site-web" target="_blank" rel="noopener">Choisir un créneau</a></p></div>
+      <div class="step"><span class="n">1</span><span class="when">Jour 1</span><h3>On s'appelle</h3><p>20 minutes en visio pour parler de vos prestations, de votre clientèle et de vos couleurs. <a href="#rdv">Choisir un créneau</a></p></div>
       <div class="step"><span class="n">2</span><span class="when">Jours 2 et 3</span><h3>Votre maquette</h3><p>Je la construis avec vos photos et vos tarifs. Elle est offerte, même si vous n'allez pas plus loin.</p></div>
       <div class="step"><span class="n">3</span><span class="when">Jours 4 à 6</span><h3>Vos retours</h3><p>Deux allers-retours de modifications sont inclus. On branche la réservation.</p></div>
       <div class="step"><span class="n">4</span><span class="when">Jour 7</span><h3>En ligne</h3><p>Votre site est publié sur votre nom de domaine, et je vous montre comment l'utiliser.</p></div>
@@ -458,13 +467,27 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
   </div>
 </section>
 
+<section class="band rdv" id="rdv">
+  <div class="in">
+    <div class="head">
+      <span class="kick">Prendre rendez-vous</span>
+      <h2>Choisissez un créneau <span class="o">de 20 minutes.</span></h2>
+      <p class="lead">Un appel en visio, offert, pour parler de votre activité et de votre site. Vous préférez écrire ? Le formulaire est juste en dessous.</p>
+    </div>
+    <div class="cal-box" aria-label="Agenda de réservation">
+      <div id="booking" class="booking"><p class="booking-wait">Chargement de l'agenda…</p></div>
+      <p class="booking-hint">↓ Faites défiler l'agenda pour voir tous les créneaux.</p>
+    </div>
+  </div>
+</section>
+
 <section class="band contact" id="contact">
   <div class="in">
     <div class="contact-copy">
       <span class="kick">Contact</span>
       <h2>Votre maquette, <span class="o">offerte.</span></h2>
       <p class="lead">Envoyez-moi le lien de votre Instagram ou de votre fiche Google. Je vous réponds sous 24 heures avec une première maquette.</p>
-      <div><a class="btn btn-ink" href="https://cal.com/einatguedj/site-web" target="_blank" rel="noopener">Réserver un appel découverte ↗</a></div>
+      <div><a class="btn btn-ink" href="#rdv">Réserver un appel découverte ↓</a></div>
       <div class="coords">
         <a class="coord" href="https://wa.me/33631350982" target="_blank" rel="noopener"><div><div class="k">WhatsApp</div><div class="v"><span class="nw">06 31 35 09 82</span></div></div><span class="go">Écrire ↗</span></a>
         <a class="coord" href="mailto:einat.guedj@gmail.com?subject=Mon%20site%20web"><div><div class="k">Email</div><div class="v">einat.guedj@gmail.com</div></div><span class="go">Écrire ↗</span></a>
@@ -501,7 +524,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
     <span>Paris · à distance · SIRET <span class="nw">107 035 206 00013</span></span>
   </div>
   <div class="in" style="padding-block:0 20px">
-    <details><summary>Mentions légales</summary><p>Éditrice : Einat Guedj, entrepreneuse individuelle, SIRET <span class="nw">107 035 206 00013</span>, Paris. Contact : einat.guedj@gmail.com, <span class="nw">06 31 35 09 82</span>. TVA non applicable, article 293 B du CGI. Hébergement : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Ce site ne dépose aucun cookie et n'enregistre aucune donnée : le formulaire ouvre seulement WhatsApp ou votre messagerie avec un message prérempli.</p></details>
+    <details><summary>Mentions légales</summary><p>Éditrice : Einat Guedj, entrepreneuse individuelle, SIRET <span class="nw">107 035 206 00013</span>, Paris. Contact : einat.guedj@gmail.com, <span class="nw">06 31 35 09 82</span>. TVA non applicable, article 293 B du CGI. Hébergement : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Ce site ne dépose aucun cookie lui-même (la prise de rendez-vous se fait via Cal.com, qui a ses propres conditions) et n'enregistre aucune donnée : le formulaire ouvre seulement WhatsApp ou votre messagerie avec un message prérempli.</p></details>
   </div>
 </footer>
 
@@ -520,6 +543,18 @@ f.addEventListener("submit", e => {
     : "https://wa.me/33631350982?text=" + encodeURIComponent(text);
   if (via === "mail") location.href = url; else window.open(url, "_blank", "noopener");
 });
+// Réservation : agenda Cal.com intégré dans la page, sans quitter le site.
+(() => {
+  const link = "einatguedj/site-web", booking = document.getElementById("booking");
+  const fallback = () => { booking.innerHTML = '<p class="booking-wait">L\'agenda ne s\'affiche pas ici. <a href="https://cal.com/' + link + '" target="_blank" rel="noopener">Ouvrir le calendrier ↗</a></p>'; };
+  if (/claude/.test(location.hostname) || location.protocol === "file:") return fallback();
+  (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", { origin: "https://cal.com" });
+  Cal("ui", { theme: "light", cssVarsPerTheme: { light: { "cal-brand": "#e7865a" } }, hideEventTypeDetails: false, layout: "month_view" });
+  booking.innerHTML = "";
+  Cal("inline", { elementOrSelector: "#booking", calLink: link, layout: "month_view" });
+  setTimeout(() => { if (!booking.querySelector("iframe")) fallback(); }, 8000);
+})();
 </script>
 
 </body>
