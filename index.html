@@ -236,7 +236,11 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
 @media (max-width:560px){
   section{padding-block:64px}
   .links{display:none}
-  .steps{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:26px}
+  .step:not(:last-child)::after{content:"";position:absolute;left:21px;top:44px;bottom:-26px;width:1px;background:var(--trait)}
+  .step{grid-template-columns:44px 1fr;column-gap:16px;row-gap:4px}
+  .step .n{grid-row:1 / span 3;width:44px;height:44px;font-size:17px}
+  .step > :not(.n){grid-column:2}
   .about .in{grid-template-columns:1fr}
   .ba > div{padding:26px}
   .stats{gap:12px}.stats div{font-size:13px}.stats b{white-space:normal;font-size:18px}
