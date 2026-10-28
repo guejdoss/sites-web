@@ -53,9 +53,9 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px;paddi
 .hero-copy{display:grid;gap:28px;min-width:0}
 .hero h1{font-size:clamp(44px,6.6vw,88px)}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.stats{display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--trait)}
-.stats div{padding:16px 28px 0 0;margin-right:28px;display:grid;gap:2px;font-size:14px;color:var(--gris)}
-.stats b{font-family:var(--display);font-weight:600;font-size:26px;color:var(--encre);letter-spacing:-.01em;line-height:1.1}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;border-top:1px solid var(--trait)}
+.stats div{padding-top:16px;display:grid;gap:4px;align-content:start;font-size:14px;line-height:1.35;color:var(--gris);min-width:0}
+.stats b{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.3vw,26px);color:var(--encre);letter-spacing:-.01em;line-height:1.1;white-space:nowrap}
 
 .compo{position:relative;aspect-ratio:1/1.08;width:100%;max-width:520px;justify-self:end}
 .arch{position:absolute;border-radius:999px 999px 0 0;background:var(--orange);overflow:hidden}
@@ -208,7 +208,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
   .steps{grid-template-columns:1fr}
   .about .in{grid-template-columns:1fr}
   .ba > div{padding:26px}
-  .stats div{padding-right:0;margin-right:22px}
+  .stats{gap:12px}.stats div{font-size:13px}
 }
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
