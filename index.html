@@ -32,7 +32,7 @@ h3{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
 .in{max-width:1180px;margin:0 auto}
 .kick{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 .kick::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--orange);flex:none}
-.lead{font-size:19px;color:var(--gris);max-width:52ch}
+.lead{font-size:19px;color:var(--gris);max-width:68ch}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-family:var(--display);font-weight:500;font-size:16px;text-decoration:none;border:1.5px solid var(--encre);cursor:pointer;transition:transform .2s ease, background .2s ease}
 .btn:hover{transform:translateY(-2px)}
 .btn-ink{background:var(--encre);color:var(--chaux)}
@@ -83,7 +83,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px;paddi
 @media (prefers-reduced-motion:reduce){.track,.card-float{animation:none}}
 
 section{padding-block:96px}
-.head{display:grid;gap:18px;margin-bottom:48px;max-width:900px}
+.head{display:grid;gap:18px;margin-bottom:48px;max-width:1040px}
 
 /* avant après */
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -153,24 +153,26 @@ section{padding-block:96px}
 .step p{color:var(--gris);font-size:15px}
 
 /* à propos */
-.about .in{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.about .in{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
 .portrait{width:clamp(180px,24vw,260px);aspect-ratio:3/4;border-radius:999px 999px 0 0;background:var(--peche);position:relative;overflow:hidden;display:grid;place-items:center}
 .portrait::before{content:"";position:absolute;width:56%;aspect-ratio:1;border-radius:50%;background:var(--orange);top:16%}
 .portrait b{position:relative;font-family:var(--display);font-weight:600;font-size:60px;color:#fff;margin-top:-18%}
 .portrait .balc{position:absolute;left:0;right:0;height:5%;background:var(--chaux)}
 .about-copy{display:grid;gap:20px;min-width:0}
-.langs-big{display:flex;gap:8px;flex-wrap:wrap}
-.langs-big span{background:var(--chaux-2);color:var(--encre);border-radius:999px;padding:7px 16px;font-weight:500;font-size:15px}
+.about .lead{max-width:none}
+.langs-big{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.langs-big::-webkit-scrollbar{display:none}
+.langs-big span{flex:none;white-space:nowrap;background:var(--chaux-2);color:var(--encre);border-radius:999px;padding:6px 12px;font-weight:500;font-size:14px}
 .langs-big span:nth-child(odd){background:var(--peche)}
 
 /* faq */
-.faq{display:grid;gap:0;border-top:1px solid var(--trait);max-width:900px}
+.faq{display:grid;gap:0;border-top:1px solid var(--trait);max-width:1040px}
 details{border-bottom:1px solid var(--trait);padding-block:22px}
 summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--display);font-weight:500;font-size:19px}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";flex:none;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:500;transition:transform .2s}
 details[open] summary::after{transform:rotate(45deg)}
-details p{margin-top:12px;color:var(--gris);max-width:65ch}
+details p{margin-top:12px;color:var(--gris);max-width:88ch}
 
 /* contact */
 .contact{background:var(--peche);color:var(--encre)}
@@ -181,20 +183,27 @@ details p{margin-top:12px;color:var(--gris);max-width:65ch}
 .coords{display:grid;gap:10px}
 .coord{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;color:var(--encre);border-radius:20px;padding:14px 18px;flex-wrap:wrap}
 .coord .k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
-.coord .v{font-weight:700;user-select:all;word-break:break-word}
-.copy{font:500 14px var(--body);border:1px solid var(--trait);background:transparent;color:var(--encre);border-radius:999px;padding:6px 14px;cursor:pointer}
+.coord .v{font-weight:700;word-break:break-word}
+a.coord{text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.coord:hover{transform:translateY(-2px);box-shadow:0 12px 24px -16px rgba(90,60,40,.4)}
+.go{font:500 14px var(--body);color:var(--encre);border:1px solid var(--encre);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.sends{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sends .btn{justify-content:center;text-align:center}
+.coord{flex-wrap:nowrap}.coord>div{min-width:0}
+@media (max-width:560px){.sends{grid-template-columns:1fr}.coord .v{font-size:15px}}
 form{background:var(--chaux);color:var(--encre);border-radius:28px;padding:28px;display:grid;gap:14px;min-width:0;box-shadow:0 30px 60px -30px rgba(90,60,40,.35)}
 label{display:grid;gap:6px;font-weight:500;font-size:14px}
 input,select,textarea{font:inherit;font-size:16px;padding:13px 16px;border-radius:14px;border:1px solid var(--trait);background:#fff;color:var(--encre);width:100%}
 input:focus,select:focus,textarea:focus{border-color:var(--encre)}
 textarea{min-height:100px;resize:vertical}
-.out{display:grid;gap:10px}
-.out textarea{min-height:150px;font-size:15px}
-.out .copy{border-color:var(--encre);color:var(--encre);justify-self:start}
 .small{font-size:14px;color:var(--gris)}
 
 footer{background:var(--chaux-2);color:var(--gris)}
-footer .in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px;font-size:14px}
+footer .in{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:20px 8px;font-size:13px}
+footer details{border:0;padding:0;width:100%}
+footer summary{font:500 12px var(--body);color:var(--gris);justify-content:flex-start;gap:8px}
+footer summary::after{width:18px;height:18px;font-size:13px}
+footer details p{margin-top:6px;font-size:12px;line-height:1.6;max-width:none}
 footer b{color:var(--encre);font-family:var(--display);font-weight:600}
 
 @media (max-width:900px){
@@ -435,7 +444,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <details><summary>Le site m'appartient-il ?</summary><p>Oui. Le nom de domaine est à votre nom, et le site vous appartient dès le paiement complet.</p></details>
       <details><summary>J'utilise déjà Planity ou un autre outil de réservation.</summary><p>Aucun souci : je relie votre site à l'outil que vous utilisez déjà. Sinon, je vous installe une solution gratuite.</p></details>
       <details><summary>Et l'hébergement et le référencement Google ?</summary><p>Votre site est hébergé sur un service rapide et fiable, gratuit pour un site vitrine. Le nom de domaine est à votre nom et vous le payez directement (environ 10 à 15 € par an) : vous gardez la main sur votre site. Pour Google, je pose les bases : titres et descriptions de chaque page, textes avec les mots que vos clients tapent, site rapide et adapté au téléphone. J'ajoute aussi votre fiche Google Business, c'est elle qui compte le plus pour être trouvé dans votre quartier. Je m'aide d'outils d'intelligence artificielle pour aller vite, mais je vérifie et règle tout moi-même.</p></details>
-      <details><summary>Combien coûte le site chaque mois ?</summary><p>Rien d'obligatoire. Le Suivi à 29 € par mois couvre l'hébergement, le nom de domaine et les petites modifications. Vous pouvez aussi tout gérer vous-même.</p></details>
+      <details><summary>Combien coûte le site chaque mois ?</summary><p>Rien d'obligatoire. Le Suivi à 29 € par mois couvre la maintenance, les mises à jour et les petites modifications. Vous pouvez aussi tout gérer vous-même.</p></details>
       <details><summary>Vous travaillez aussi à l'étranger ?</summary><p>Oui, entièrement à distance. Je crée des sites dans toutes les langues, pour la France comme pour l'étranger. Le site de Sheyna, à Tel-Aviv, est par exemple en français, anglais et hébreu.</p></details>
     </div>
   </div>
@@ -449,9 +458,9 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <p class="lead">Envoyez-moi le lien de votre Instagram ou de votre fiche Google. Je vous réponds sous 24 heures avec une première maquette.</p>
       <div><a class="btn btn-ink" href="https://cal.com/einatguedj/site-web" target="_blank" rel="noopener">Réserver un appel découverte ↗</a></div>
       <div class="coords">
-        <div class="coord"><div><div class="k">WhatsApp</div><div class="v" id="v-phone"><span class="nw">06 31 35 09 82</span></div></div><button class="copy" type="button" data-copy="v-phone">Copier</button></div>
-        <div class="coord"><div><div class="k">Email</div><div class="v" id="v-mail">einat.guedj@gmail.com</div></div><button class="copy" type="button" data-copy="v-mail">Copier</button></div>
-        <div class="coord"><div><div class="k">LinkedIn</div><div class="v"><a href="https://www.linkedin.com/in/einat-guedj" target="_blank" rel="noopener">linkedin.com/in/einat-guedj</a></div></div></div>
+        <a class="coord" href="https://wa.me/33631350982" target="_blank" rel="noopener"><div><div class="k">WhatsApp</div><div class="v"><span class="nw">06 31 35 09 82</span></div></div><span class="go">Écrire ↗</span></a>
+        <a class="coord" href="mailto:einat.guedj@gmail.com?subject=Mon%20site%20web"><div><div class="k">Email</div><div class="v">einat.guedj@gmail.com</div></div><span class="go">Écrire ↗</span></a>
+        <a class="coord" href="https://www.linkedin.com/in/einat-guedj" target="_blank" rel="noopener"><div><div class="k">LinkedIn</div><div class="v">linkedin.com/in/einat-guedj</div></div><span class="go">Voir ↗</span></a>
       </div>
     </div>
 
@@ -469,45 +478,40 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
         </select>
       </label>
       <label for="f-msg">Un mot sur votre projet<textarea id="f-msg"></textarea></label>
-      <button class="btn btn-ink" type="submit">Préparer mon message →</button>
-      <div class="out" id="out" hidden>
-        <p class="small">Votre message est prêt. Copiez-le et envoyez-le par WhatsApp ou par email.</p>
-        <textarea id="f-out" readonly></textarea>
-        <button class="copy" type="button" id="copy-out">Copier le message</button>
+      <div class="sends">
+        <button class="btn btn-ink" type="submit" data-via="wa">Envoyer par WhatsApp ↗</button>
+        <button class="btn btn-ink" type="submit" data-via="mail">Envoyer par email ↗</button>
       </div>
+      <p class="small">Votre message s'ouvre déjà rempli dans WhatsApp ou dans votre messagerie : il ne reste qu'à l'envoyer.</p>
     </form>
   </div>
 </section>
 
 <footer class="band">
   <div class="in">
-    <span><b>Einat Guedj</b> · création de sites web</span>
+    <span><b>Mon site web</b> · sites créés par Einat Guedj</span>
     <span>Paris · à distance · SIRET <span class="nw">107 035 206 00013</span></span>
   </div>
-  <div class="in" style="padding-bottom:28px;font-size:13px;line-height:1.6">
-    <details style="border:0;padding:0"><summary style="font-size:14px;font-family:var(--body)">Mentions légales</summary><p style="margin-top:8px">Éditrice : Einat Guedj, entrepreneuse individuelle, SIRET <span class="nw">107 035 206 00013</span>, Paris. Contact : einat.guedj@gmail.com, <span class="nw">06 31 35 09 82</span>. TVA non applicable, article 293 B du CGI. Hébergement : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Ce site ne dépose aucun cookie et n'enregistre aucune donnée : le formulaire prépare seulement un message à copier.</p></details>
+  <div class="in" style="padding-block:0 20px">
+    <details><summary>Mentions légales</summary><p>Éditrice : Einat Guedj, entrepreneuse individuelle, SIRET <span class="nw">107 035 206 00013</span>, Paris. Contact : einat.guedj@gmail.com, <span class="nw">06 31 35 09 82</span>. TVA non applicable, article 293 B du CGI. Hébergement : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Ce site ne dépose aucun cookie et n'enregistre aucune donnée : le formulaire ouvre seulement WhatsApp ou votre messagerie avec un message prérempli.</p></details>
   </div>
 </footer>
 
 <script>
-function copyText(text, btn){
-  const label = btn.textContent;
-  const done = () => { btn.textContent = "Copié"; setTimeout(() => btn.textContent = label, 1500); };
-  try { navigator.clipboard.writeText(text).then(done, () => btn.textContent = "Sélectionnez le texte"); }
-  catch (e) { btn.textContent = "Sélectionnez le texte"; }
-}
-document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", () => copyText(document.getElementById(b.dataset.copy).textContent.trim(), b)));
-const f = document.getElementById("f"), out = document.getElementById("out"), fo = document.getElementById("f-out");
+const f = document.getElementById("f");
 f.addEventListener("submit", e => {
   e.preventDefault();
   const v = id => document.getElementById(id).value.trim();
-  fo.value = `Bonjour Einat, je suis ${v("f-name") || "…"}` + (v("f-biz") ? ` (${v("f-biz")})` : "") + `.\n` +
+  const text = `Bonjour Einat, je suis ${v("f-name") || "…"}` + (v("f-biz") ? ` (${v("f-biz")})` : "") + `.\n` +
     `Ce qui m'intéresse : ${v("f-offer")}.\n` +
     (v("f-link") ? `Mon compte : ${v("f-link")}\n` : "") +
     (v("f-msg") ? `${v("f-msg")}\n` : "") + `Merci !`;
-  out.hidden = false; fo.focus(); fo.select();
+  const via = (e.submitter && e.submitter.dataset.via) || "wa";
+  const url = via === "mail"
+    ? "mailto:einat.guedj@gmail.com?subject=" + encodeURIComponent("Mon site web : " + v("f-offer")) + "&body=" + encodeURIComponent(text)
+    : "https://wa.me/33631350982?text=" + encodeURIComponent(text);
+  if (via === "mail") location.href = url; else window.open(url, "_blank", "noopener");
 });
-document.getElementById("copy-out").addEventListener("click", e => { fo.select(); copyText(fo.value, e.currentTarget); });
 </script>
 
 </body>
