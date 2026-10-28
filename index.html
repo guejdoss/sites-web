@@ -8,7 +8,7 @@
 <meta name="description" content="Des sites avec réservation en ligne pour les indépendants et les commerces, livrés en 7 jours, dans la langue de vos clients.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,800;0,900;1,800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,800;0,900;1,800&family=DM+Mono:wght@400;500&family=Cormorant+Garamond:wght@600&family=Allura&family=Assistant:wght@400;600;700&display=swap">
 <style>
 /* Layout : esprit Bauhaus de la Ville Blanche. Grandes capitales grasses, arches orange à balcons, soleil pêche, bandes encre. Un seul univers clair, assumé. */
 :root{
@@ -98,24 +98,27 @@ section{padding-block:96px}
 .before li::before{border:2px solid #b9ad9e}
 .after li::before{background:#fff}
 
-/* réalisation */
-.work{background:var(--peche)}
-.work .in{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.window{border-radius:999px 999px 24px 24px;background:var(--orange);padding:28px 24px 24px;aspect-ratio:4/5;display:flex;align-items:flex-end;max-width:460px;width:100%;position:relative;overflow:hidden}
-.window::before{content:"";position:absolute;width:46%;aspect-ratio:1;border-radius:50%;background:var(--peche);left:27%;top:9%;opacity:.9}
-.mini{position:relative;background:var(--chaux);border-radius:20px;padding:20px;display:grid;gap:10px;width:100%;box-shadow:0 20px 40px -24px rgba(90,60,40,.4)}
-.mini .langs{display:flex;gap:6px}
-.mini .langs span{font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid var(--trait)}
-.mini .langs span:first-child{background:var(--encre);color:var(--chaux)}
-.mini .nm{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05}
-.mini .row{display:flex;justify-content:space-between;font-size:14px;border-bottom:1.5px solid var(--trait);padding-bottom:6px}
-.mini .row span:last-child{font-family:var(--mono);font-size:13px}
-.mini .book{justify-self:start;background:var(--orange);color:#fff;border-radius:999px;padding:8px 16px;font-weight:700;font-size:13px}
-.work-copy{display:grid;gap:22px;min-width:0}
-.work-copy .lead{color:#5a4a3e}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chips span{border:1px solid rgba(61,53,48,.25);background:rgba(255,255,255,.5);border-radius:999px;padding:6px 14px;font-weight:500;font-size:15px}
-
+/* réalisation : chaque exemple garde la DA de son client (ici SHEY : crème, latte, cacao, Cormorant, Allura) */
+.work{background:var(--chaux)}
+.shey{--cream:#f6efe6;--latte:#d8c3a8;--milk:#ecd9cf;--cocoa:#4a2e1f;--cocoa-soft:#7a5b47;--sline:#e2d3c2;
+  background:var(--cream);color:var(--cocoa);border-radius:32px;padding:clamp(24px,5vw,56px);display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,64px);align-items:center;font-family:"Assistant",system-ui,sans-serif;box-shadow:0 30px 60px -40px rgba(74,46,31,.45)}
+.shey-photos{position:relative;min-width:0}
+.shey-arch{border-radius:999px 999px 10px 10px;border:2px solid var(--latte);padding:8px;max-width:360px;margin-inline:auto}
+.shey-arch img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 6px 6px}
+.shey-thumbs{display:flex;gap:10px;justify-content:center;margin-top:-56px;position:relative}
+.shey-thumbs img{width:96px;height:96px;object-fit:cover;border-radius:50%;border:4px solid var(--cream)}
+.shey-copy{display:grid;gap:18px;min-width:0}
+.shey-eyebrow{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--cocoa-soft)}
+.shey-mark{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(48px,7vw,80px);letter-spacing:.08em;line-height:.9}
+.shey-script{font-family:"Allura",cursive;font-size:clamp(30px,3.6vw,40px);line-height:1}
+.shey-copy p{font-size:17px;color:var(--cocoa-soft);max-width:48ch}
+.shey-tags{display:flex;gap:8px;flex-wrap:wrap}
+.shey-tags span{background:var(--milk);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.shey-btn{justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 26px;border-radius:999px;background:var(--cocoa);color:#fffaf5;text-decoration:none;font-weight:600}
+.shey-btn:hover{background:#2f1c12}
+.nw{white-space:nowrap}
+.work-note{margin-top:20px;font-size:14px;color:var(--gris);text-align:center}
+@media (max-width:900px){.shey{grid-template-columns:1fr}}
 /* offres */
 .launch{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:var(--peche);color:var(--encre);border-radius:28px;padding:28px 32px;margin-bottom:24px}
 .launch h3{font-size:24px}
@@ -221,9 +224,9 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
     <nav>
       <a class="logo" href="#top"><i aria-hidden="true"></i>Einat Guedj</a>
       <div class="links">
-        <a href="#realisation">Réalisation</a>
-        <a href="#offres">Offres</a>
+        <a href="#realisation">Réalisations</a>
         <a href="#etapes">Méthode</a>
+        <a href="#offres">Offres</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -302,21 +305,39 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
 
 <section class="band work" id="realisation">
   <div class="in">
-    <div class="window">
-      <div class="mini">
-        <div class="langs"><span>FR</span><span>EN</span><span>עב</span></div>
-        <div class="nm">SHEY Nails<br>&amp; Massages</div>
-        <div class="row"><span>Ongles</span><span>Tel-Aviv</span></div>
-        <div class="row"><span>Massages</span><span>sur réservation</span></div>
-        <span class="book">Réserver</span>
-      </div>
+    <div class="head">
+      <span class="kick">Exemples de réalisation</span>
+      <h2>Un site à l'image <span class="o">de chaque client.</span></h2>
+      <p class="lead">Je ne plaque pas mon style : chaque site reprend l'univers, les couleurs et les photos de la personne. Exemple avec SHEY.</p>
     </div>
-    <div class="work-copy">
-      <span class="kick">Réalisation</span>
-      <h2>Le salon de Sheyna, à Tel-Aviv</h2>
-      <p class="lead">Un site en français, anglais et hébreu, avec la carte des soins, une galerie et la réservation en ligne. Sa clientèle réserve dans sa langue, sans passer par les messages.</p>
-      <div class="chips"><span>Trilingue</span><span>Hébreu de droite à gauche</span><span>Réservation</span><span>Pensé pour le téléphone</span></div>
-      <div><a class="btn btn-ink" href="https://guejdoss.github.io/shey.nails.massages_tlv/" target="_blank" rel="noopener">Voir le site de SHEY ↗</a></div>
+    <article class="shey">
+      <div class="shey-photos">
+        <div class="shey-arch"><img src="img/shey-hero.jpg" alt="Manucure French rose laiteux réalisée par Sheyna" loading="lazy"></div>
+        <div class="shey-thumbs"><img src="img/shey-g05.jpg" alt="Ongles amande couleur chocolat" loading="lazy"><img src="img/shey-g12.jpg" alt="Ongles nude rose laiteux" loading="lazy"></div>
+      </div>
+      <div class="shey-copy">
+        <span class="shey-eyebrow">Nails · Massages · Tel-Aviv</span>
+        <div class="shey-mark">SHEY</div>
+        <div class="shey-script">Prenez soin de vous</div>
+        <p>Le salon de Sheyna, rue King George. Un site en français, anglais et hébreu, avec la carte des soins, une galerie de ses vraies réalisations et la réservation en ligne. Sa clientèle réserve dans sa langue, sans passer par les messages.</p>
+        <div class="shey-tags"><span>Français · English · עברית</span><span>Réservation en ligne</span><span>Pensé pour le téléphone</span></div>
+        <a class="shey-btn" href="https://guejdoss.github.io/shey.nails.massages_tlv/" target="_blank" rel="noopener">Voir le site de SHEY ↗</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="etapes">
+  <div class="in">
+    <div class="head">
+      <span class="kick">Méthode</span>
+      <h2>De votre Instagram à <span class="o">votre site</span> en une semaine.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><span class="when">Jour 1</span><h3>On s'appelle</h3><p>20 minutes en visio pour parler de vos prestations, de votre clientèle et de vos couleurs. <a href="https://cal.com/einatguedj/site-web" target="_blank" rel="noopener">Choisir un créneau</a></p></div>
+      <div class="step"><span class="n">2</span><span class="when">Jours 2 et 3</span><h3>Votre maquette</h3><p>Je la construis avec vos photos et vos tarifs. Elle est offerte, même si vous n'allez pas plus loin.</p></div>
+      <div class="step"><span class="n">3</span><span class="when">Jours 4 à 6</span><h3>Vos retours</h3><p>Deux allers-retours de modifications sont inclus. On branche la réservation.</p></div>
+      <div class="step"><span class="n">4</span><span class="when">Jour 7</span><h3>En ligne</h3><p>Votre site est publié sur votre nom de domaine, et je vous montre comment l'utiliser.</p></div>
     </div>
   </div>
 </section>
@@ -385,21 +406,6 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
   </div>
 </section>
 
-<section class="band" id="etapes" style="background:var(--chaux-2)">
-  <div class="in">
-    <div class="head">
-      <span class="kick">Méthode</span>
-      <h2>De votre Instagram à <span class="o">votre site</span> en une semaine.</h2>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="n">1</span><span class="when">Jour 1</span><h3>On s'appelle</h3><p>20 minutes en visio pour parler de vos prestations, de votre clientèle et de vos couleurs. <a href="https://cal.com/einatguedj/site-web" target="_blank" rel="noopener">Choisir un créneau</a></p></div>
-      <div class="step"><span class="n">2</span><span class="when">Jours 2 et 3</span><h3>Votre maquette</h3><p>Je la construis avec vos photos et vos tarifs. Elle est offerte, même si vous n'allez pas plus loin.</p></div>
-      <div class="step"><span class="n">3</span><span class="when">Jours 4 à 6</span><h3>Vos retours</h3><p>Deux allers-retours de modifications sont inclus. On branche la réservation.</p></div>
-      <div class="step"><span class="n">4</span><span class="when">Jour 7</span><h3>En ligne</h3><p>Votre site est publié sur votre nom de domaine, et je vous montre comment l'utiliser.</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="band about">
   <div class="in">
     <div class="portrait" aria-hidden="true">
@@ -441,7 +447,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <p class="lead">Envoyez-moi le lien de votre Instagram ou de votre fiche Google. Je vous réponds sous 24 heures avec une première maquette.</p>
       <div><a class="btn btn-ink" href="https://cal.com/einatguedj/site-web" target="_blank" rel="noopener">Réserver un appel découverte ↗</a></div>
       <div class="coords">
-        <div class="coord"><div><div class="k">WhatsApp</div><div class="v" id="v-phone">06 31 35 09 82</div></div><button class="copy" type="button" data-copy="v-phone">Copier</button></div>
+        <div class="coord"><div><div class="k">WhatsApp</div><div class="v" id="v-phone"><span class="nw">06 31 35 09 82</span></div></div><button class="copy" type="button" data-copy="v-phone">Copier</button></div>
         <div class="coord"><div><div class="k">Email</div><div class="v" id="v-mail">einat.guedj@gmail.com</div></div><button class="copy" type="button" data-copy="v-mail">Copier</button></div>
         <div class="coord"><div><div class="k">LinkedIn</div><div class="v"><a href="https://www.linkedin.com/in/einat-guedj" target="_blank" rel="noopener">linkedin.com/in/einat-guedj</a></div></div></div>
       </div>
@@ -474,10 +480,10 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
 <footer class="band">
   <div class="in">
     <span><b>Einat Guedj</b> · création de sites web</span>
-    <span>Paris · à distance · SIRET 107 035 206 00013</span>
+    <span>Paris · à distance · SIRET <span class="nw">107 035 206 00013</span></span>
   </div>
   <div class="in" style="padding-bottom:28px;font-size:13px;line-height:1.6">
-    <details style="border:0;padding:0"><summary style="font-size:14px;font-family:var(--body)">Mentions légales</summary><p style="margin-top:8px">Éditrice : Einat Guedj, entrepreneuse individuelle, SIRET 107 035 206 00013, Paris. Contact : einat.guedj@gmail.com, 06 31 35 09 82. TVA non applicable, article 293 B du CGI. Hébergement : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Ce site ne dépose aucun cookie et n'enregistre aucune donnée : le formulaire prépare seulement un message à copier.</p></details>
+    <details style="border:0;padding:0"><summary style="font-size:14px;font-family:var(--body)">Mentions légales</summary><p style="margin-top:8px">Éditrice : Einat Guedj, entrepreneuse individuelle, SIRET <span class="nw">107 035 206 00013</span>, Paris. Contact : einat.guedj@gmail.com, <span class="nw">06 31 35 09 82</span>. TVA non applicable, article 293 B du CGI. Hébergement : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Ce site ne dépose aucun cookie et n'enregistre aucune donnée : le formulaire prépare seulement un message à copier.</p></details>
   </div>
 </footer>
 
