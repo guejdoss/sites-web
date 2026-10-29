@@ -500,7 +500,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <div><a class="btn btn-ink" href="#rdv">Réserver un appel découverte ↓</a></div>
       <div class="coords">
         <a class="coord" href="https://wa.me/33631350982" target="_blank" rel="noopener"><div><div class="k">WhatsApp</div><div class="v"><span class="nw">06 31 35 09 82</span></div></div><span class="go">Écrire ↗</span></a>
-        <a class="coord" href="mailto:einat.guedj@gmail.com?subject=Mon%20site%20web"><div><div class="k">Email</div><div class="v">einat.guedj@gmail.com</div></div><span class="go">Écrire ↗</span></a>
+        <a class="coord" href="mailto:einat.guedj@gmail.com?subject=Mon%20site%20web" target="_blank" rel="noopener"><div><div class="k">Email</div><div class="v">einat.guedj@gmail.com</div></div><span class="go">Écrire ↗</span></a>
         <a class="coord" href="https://www.linkedin.com/in/einat-guedj" target="_blank" rel="noopener"><div><div class="k">LinkedIn</div><div class="v">linkedin.com/in/einat-guedj</div></div><span class="go">Voir ↗</span></a>
       </div>
     </div>
@@ -539,6 +539,9 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
 </footer>
 
 <script>
+// Ordinateur : WhatsApp Web dans un nouvel onglet ; téléphone : l'app WhatsApp ou la messagerie.
+const desk = !/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+if (desk) document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => a.href = "https://web.whatsapp.com/send?phone=33631350982");
 const f = document.getElementById("f");
 f.addEventListener("submit", e => {
   e.preventDefault();
@@ -551,7 +554,7 @@ f.addEventListener("submit", e => {
   const url = via === "mail"
     ? "mailto:einat.guedj@gmail.com?subject=" + encodeURIComponent("Mon site web : " + v("f-offer")) + "&body=" + encodeURIComponent(text)
     : "https://wa.me/33631350982?text=" + encodeURIComponent(text);
-  if (via === "mail") location.href = url; else window.open(url, "_blank", "noopener");
+  window.open(desk && via === "wa" ? url.replace("https://wa.me/33631350982?", "https://web.whatsapp.com/send?phone=33631350982&") : url, "_blank", "noopener");
 });
 // Réservation : agenda Cal.com intégré dans la page, sans quitter le site.
 (() => {
