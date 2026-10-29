@@ -107,18 +107,19 @@ section{padding-block:96px}
 
 /* réalisation : chaque exemple garde la DA de son client (ici SHEY : crème, latte, cacao, Cormorant, Allura) */
 .work{background:var(--chaux)}
+.work .head{margin-bottom:28px}
 .shey{--cream:#f6efe6;--latte:#d8c3a8;--milk:#ecd9cf;--cocoa:#4a2e1f;--cocoa-soft:#7a5b47;--sline:#e2d3c2;
-  background:var(--cream);color:var(--cocoa);border-radius:32px;padding:clamp(24px,5vw,56px);display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(28px,4vw,56px);align-items:center;font-family:"Assistant",system-ui,sans-serif;box-shadow:0 30px 60px -40px rgba(74,46,31,.45)}
+  background:var(--cream);color:var(--cocoa);border-radius:32px;padding:clamp(22px,3.5vw,40px);display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,56px);align-items:center;font-family:"Assistant",system-ui,sans-serif;box-shadow:0 30px 60px -40px rgba(74,46,31,.45)}
 .shey-photos{position:relative;min-width:0}
-.shey-arch{border-radius:999px 999px 10px 10px;border:2px solid var(--latte);padding:8px;max-width:360px;margin-inline:auto}
+.shey-arch{border-radius:999px 999px 10px 10px;border:2px solid var(--latte);padding:6px;width:clamp(200px,20vw,250px);margin-inline:auto}
 .shey-arch img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 6px 6px}
-.shey-thumbs{display:flex;gap:10px;justify-content:center;margin-top:-56px;position:relative}
-.shey-thumbs img{width:96px;height:96px;object-fit:cover;border-radius:50%;border:4px solid var(--cream)}
-.shey-copy{display:grid;gap:18px;min-width:0}
+.shey-thumbs{display:flex;gap:8px;justify-content:center;margin-top:-40px;position:relative}
+.shey-thumbs img{width:72px;height:72px;object-fit:cover;border-radius:50%;border:4px solid var(--cream)}
+.shey-copy{display:grid;gap:12px;min-width:0}
 .shey-eyebrow{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--cocoa-soft)}
-.shey-mark{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(48px,7vw,80px);letter-spacing:.08em;line-height:.9}
-.shey-script{font-family:"Allura",cursive;font-size:clamp(30px,3.6vw,40px);line-height:1}
-.shey-copy p{font-size:17px;color:var(--cocoa-soft);max-width:none}
+.shey-mark{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(42px,5vw,60px);letter-spacing:.08em;line-height:.9}
+.shey-script{font-family:"Allura",cursive;font-size:clamp(26px,2.8vw,32px);line-height:1}
+.shey-copy p{font-size:16px;color:var(--cocoa-soft);max-width:none}
 .shey-tags{display:flex;gap:8px;flex-wrap:wrap}
 .shey-tags span{background:var(--milk);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
 .shey-btn{justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 26px;border-radius:999px;background:var(--cocoa);color:#fffaf5;text-decoration:none;font-weight:600}
@@ -188,11 +189,13 @@ details p{margin-top:8px;color:var(--gris);max-width:none}
 /* contact */
 .contact{background:var(--peche);color:var(--encre)}
 .contact .in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.contact h2{color:var(--encre)}
+.contact h2{color:var(--encre);font-size:clamp(30px,3.6vw,44px)}
+section.contact{padding-block:56px}
+.contact .lead{font-size:17px}
 .contact .lead{color:var(--gris)}
-.contact-copy{display:grid;gap:24px;min-width:0}
-.coords{display:grid;gap:10px}
-.coord{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;color:var(--encre);border-radius:20px;padding:14px 18px;flex-wrap:wrap}
+.contact-copy{display:grid;gap:16px;min-width:0}
+.coords{display:grid;gap:8px}
+.coord{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;color:var(--encre);border-radius:18px;padding:10px 16px;flex-wrap:wrap}
 .coord .k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
 .coord .v{font-weight:700;word-break:break-word}
 a.coord{text-decoration:none;transition:transform .15s,box-shadow .15s}
@@ -202,17 +205,19 @@ a.coord:hover{transform:translateY(-2px);box-shadow:0 12px 24px -16px rgba(90,60
 .sends .btn{justify-content:center;text-align:center}
 .coord{flex-wrap:nowrap}.coord>div{min-width:0}
 @media (max-width:560px){.sends{grid-template-columns:1fr}.coord .v{font-size:15px}}
-form{background:var(--chaux);color:var(--encre);border-radius:28px;padding:28px;display:grid;gap:14px;min-width:0;box-shadow:0 30px 60px -30px rgba(90,60,40,.35)}
+form{background:var(--chaux);color:var(--encre);border-radius:28px;padding:22px;display:grid;gap:10px;min-width:0;box-shadow:0 30px 60px -30px rgba(90,60,40,.35)}
 label{display:grid;gap:6px;font-weight:500;font-size:14px}
-input,select,textarea{font:inherit;font-size:16px;padding:13px 16px;border-radius:14px;border:1px solid var(--trait);background:#fff;color:var(--encre);width:100%}
+input,select,textarea{font:inherit;font-size:16px;padding:10px 14px;border-radius:12px;border:1px solid var(--trait);background:#fff;color:var(--encre);width:100%}
 input:focus,select:focus,textarea:focus{border-color:var(--encre)}
-textarea{min-height:100px;resize:vertical}
+textarea{min-height:72px;resize:vertical}
 .small{font-size:14px;color:var(--gris)}
-.rdv{padding-bottom:0}
+.rdv{padding-block:40px 0}
+.rdv .head{margin-bottom:24px}
+section:has(+ .rdv){padding-bottom:16px}
 .cal-box{background:#fff;border:1px solid var(--trait);border-radius:28px;padding:18px;box-shadow:0 30px 60px -30px rgba(90,60,40,.25)}
 .booking{border-radius:16px;overflow:auto}
 .booking:has(iframe){min-height:520px;max-height:min(640px,78vh);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
-.booking-hint{margin:10px 4px 0;font-size:14px;color:var(--gris);display:none}
+.booking-hint{margin:0 4px 8px;font-size:13px;color:var(--gris);display:none}
 .cal-box:has(#booking iframe) .booking-hint{display:block}
 .booking-wait{color:var(--gris);padding:24px 6px}
 @media (max-width:560px){.cal-box{padding:10px;border-radius:20px}}
@@ -481,8 +486,8 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <p class="lead">A free video call to talk about your business and your website. Prefer to write? The form is just below.</p>
     </div>
     <div class="cal-box" aria-label="Booking calendar">
-      <div id="booking" class="booking"><p class="booking-wait">Loading the calendar…</p></div>
       <p class="booking-hint">↓ Scroll inside the calendar to see all slots.</p>
+      <div id="booking" class="booking"><p class="booking-wait">Loading the calendar…</p></div>
     </div>
   </div>
 </section>
