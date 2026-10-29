@@ -88,8 +88,9 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px;paddi
 @keyframes slide{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.track,.card-float{animation:none}}
 
-section{padding-block:96px}
-.head{display:grid;gap:18px;margin-bottom:48px;max-width:1040px}
+section{padding-block:64px}
+.head{display:grid;gap:14px;margin-bottom:32px}
+.head .lead{max-width:none}
 
 /* avant après */
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -241,7 +242,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
   .launch{grid-template-columns:1fr}
 }
 @media (max-width:560px){
-  section{padding-block:64px}
+  section{padding-block:44px}
   .links{display:none}
   .steps{grid-template-columns:1fr;gap:26px}
   .step:not(:last-child)::after{content:"";position:absolute;left:21px;top:44px;bottom:-26px;width:1px;background:var(--trait)}
