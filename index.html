@@ -267,13 +267,27 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
   .ba > div{padding:26px}
   .stats{gap:12px}.stats div{font-size:13px}.stats b{white-space:normal;font-size:18px}
 }
+
+/* barre du haut fixe */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(252,250,246,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--trait)}
+.topbar nav{padding-block:12px}
+.nav-cta{min-height:40px;padding:0 18px;font-size:14px}
+section[id],header[id]{scroll-margin-top:72px}
+.gift{display:inline-block;margin-top:8px;background:#fff;color:var(--orange-deep);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
+.opts-line{margin-top:18px;background:var(--chaux-2);border-radius:20px;padding:14px 20px;font-size:15px;color:var(--gris)}
+.opts-line b{color:var(--encre)}
+@media (max-width:900px){
+  .offers{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(260px,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:thin;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}
+  .offers > *{scroll-snap-align:start}
+}
+@media (max-width:560px){.topbar nav{gap:8px;flex-wrap:nowrap}.topbar .navr{gap:8px}.topbar .logo{font-size:16px;gap:8px}.nav-cta{min-height:36px;padding:0 12px;font-size:13px}.nav-cta .long{display:none}.topbar .lang a,.topbar .lang b{padding:3px 7px}}
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 
 
-<div class="band">
+<div class="band topbar">
   <div class="in">
     <nav>
       <a class="logo" href="#top"><i aria-hidden="true"></i>Mon site web</a>
@@ -284,9 +298,15 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
           <a href="#offres">Offres</a>
           <a href="#contact">Contact</a>
         </div>
+        <a class="btn btn-orange nav-cta" href="#rdv"><span><span class="long">Prendre </span>rendez-vous</span></a>
         <div class="lang" aria-label="Langue"><b>FR</b><a href="en.html" hreflang="en" lang="en">EN</a></div>
       </div>
     </nav>
+  </div>
+</div>
+
+<div class="band">
+  <div class="in">
 
     <header class="hero" id="top">
       <div class="hero-copy">
@@ -406,10 +426,6 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <h2>Trois formules. <span class="o">Des prix affichés.</span></h2>
     </div>
 
-    <div class="launch">
-      <div><h3>Offre de lancement</h3><p>Site Pro + fiche Google, réservé aux 5 premiers clients.</p></div>
-      <div class="price">890 €</div>
-    </div>
 
     <div class="offers">
       <article class="offer">
@@ -430,6 +446,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
         <div><h3>Pro</h3></div>
         <div>
           <div class="amount">790 €<small>pour les 5 premiers clients, puis <span class="nw">990 à 1 490 €</span> selon les pages</small></div>
+          <span class="gift">+ fiche Google offerte pour les 5 premiers clients</span>
         </div>
         <ul>
           <li>Plusieurs sections : soins, équipe, avis, accès</li>
@@ -454,11 +471,7 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       </article>
     </div>
 
-    <div class="options">
-      <div class="option"><h3>Fiche Google</h3><span class="p">150 € <small>puis 49 € / mois</small></span><p>Photos, horaires, services, réponses aux avis : vous ressortez sur Google Maps.</p></div>
-      <div class="option"><h3>Instagram</h3><span class="p">290 à 490 € <small>/ mois</small></span><p>Bio, stories à la une, 12 posts et leurs légendes préparés chaque mois.</p></div>
-      <div class="option"><h3>Maquette</h3><span class="p">Offerte</span><p>Je prépare votre page d'accueil à partir de votre Instagram. Vous décidez ensuite.</p></div>
-    </div>
+    <p class="opts-line"><b>En option :</b> fiche Google <span class="nw">150 €</span> puis <span class="nw">49 €/mois</span> · Instagram 290 à <span class="nw">490 €/mois</span>. La maquette de votre page d'accueil est toujours offerte.</p>
     <p class="note">Prix nets, TVA non applicable (article 293 B du CGI). 40 % d'acompte à la commande, le solde à la mise en ligne.</p>
   </div>
 </section>
@@ -528,7 +541,6 @@ footer b{color:var(--encre);font-family:var(--display);font-weight:600}
       <label for="f-offer">Ce qui vous intéresse
         <select id="f-offer">
           <option>Maquette offerte</option>
-          <option>Offre de lancement à 890 €</option>
           <option>Site Essentiel</option>
           <option>Site Pro</option>
           <option>Fiche Google ou Instagram</option>
