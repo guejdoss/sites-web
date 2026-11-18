@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Clair&Net · Nettoyage professionnel</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700;800;900&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#f6faf9;--bg2:#e9f3f1;--card:#ffffff;--ink:#0f2a2e;--accent:#0e7c74;--accent-ink:#0e7c74;--on-accent:#ffffff;--soft:#d6efeb;--line:#dbe8e5;--line-strong:#c2d7d3;--radius:10px;--radius-lg:16px;--display:'Red Hat Display',system-ui,sans-serif;--body:'Red Hat Text',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+.demo{background:var(--ink);color:var(--bg);font-size:12px;letter-spacing:.04em;text-align:center;padding:7px 16px}
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:24px}
+.logo{font-family:var(--display);font-size:22px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
+.logo small{display:block;font-family:var(--body);font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.6;font-weight:500;margin-top:-2px}
+nav.links{display:flex;gap:28px;font-size:14px}
+nav.links a{opacity:.75;transition:.2s}
+nav.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:var(--radius);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:15px;border:1px solid var(--accent);cursor:pointer;transition:.2s;white-space:nowrap}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn.sm{padding:9px 16px;font-size:14px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin-bottom:14px;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(38px,5.4vw,66px)}
+h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:14px}
+h3{font-size:21px;margin-bottom:6px}
+.lead{font-size:18px;opacity:.78;max-width:640px}
+section{padding:84px 0}
+section.alt{background:var(--bg2)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head p{max-width:520px;opacity:.75}
+.grid{display:grid;gap:22px}
+.grid>*{min-width:0}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px}
+.card p{opacity:.75;font-size:15px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--accent-ink);margin-bottom:18px}
+.ico svg{width:22px;height:22px}
+.hero{padding:76px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero p.lead{margin:22px 0 32px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;font-size:14px;opacity:.75}
+.trust b{display:block;font-family:var(--display);font-size:26px;opacity:1;color:var(--ink)}
+.visual{border-radius:var(--radius-lg);min-height:440px;position:relative;overflow:hidden}
+label{font-size:13px;font-weight:600;display:block;margin-bottom:6px;opacity:.85}
+.field{margin-bottom:16px}
+input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line-strong);border-radius:calc(var(--radius) - 2px);background:var(--bg);outline:none;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--soft)}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;cursor:pointer;font-size:14px;transition:.2s}
+.chip.on,.chip:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.note{font-size:13px;opacity:.65}
+.ok{display:none;padding:14px 16px;border-radius:var(--radius);background:var(--soft);color:var(--accent-ink);font-weight:600;margin-top:14px}
+.ok.show{display:block}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font-size:22px;line-height:1;opacity:.6}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:10px;opacity:.75}
+footer{padding:36px 0;border-top:1px solid var(--line);font-size:13px;opacity:.8}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
+.swipe-hint{display:none;font-size:12px;opacity:.55;margin:-6px 0 12px;letter-spacing:.04em}
+.feat-tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--accent-ink);font-weight:700;margin-bottom:12px}
+@media (max-width:960px){
+ .g3,.g4{grid-template-columns:repeat(2,1fr)}
+ .hero .wrap{grid-template-columns:1fr;gap:36px}
+ .visual{min-height:300px}
+}
+@media (max-width:760px){
+ .wrap{padding:0 18px}
+ section{padding:56px 0}
+ .hero{padding:44px 0 56px}
+ nav.links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;padding:18px;gap:16px;border-bottom:1px solid var(--line)}
+ nav.links.open{display:flex}
+ .burger{display:block}
+ header.nav .btn{display:none}
+ .g2,.row2{grid-template-columns:1fr}
+ .g3,.g4,.pf{display:grid;grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:minmax(250px,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 18px 14px;margin-inline:-18px;scroll-padding-inline:18px;scrollbar-width:thin;gap:14px}
+ .g3>*,.g4>*,.pf>*{scroll-snap-align:start}
+ .swipe-hint{display:block!important}
+ .card{padding:22px}
+ .lead{font-size:16px}
+ .trust{gap:20px}
+}
+
+h1,h2,h3{font-weight:800;letter-spacing:-.025em}
+h1 span{color:var(--accent)}
+.visual{background:linear-gradient(150deg,#0e7c74,#13a598 60%,#7fd6c9);padding:28px;display:flex;align-items:flex-end}
+.visual .bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35)}
+.visual .live{position:relative;background:#fff;border-radius:14px;padding:18px 20px;width:100%;max-width:320px;box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.live .row{display:flex;justify-content:space-between;font-size:14px;padding:6px 0}
+.live .row b{color:var(--accent)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:8px;box-shadow:0 0 0 4px #dcfce7}
+.calc{display:grid;grid-template-columns:1.25fr .75fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(15,42,46,.08)}
+.calc .in{padding:36px}
+.calc .out{background:var(--ink);color:#fff;padding:36px;display:flex;flex-direction:column}
+.out .big{font-size:56px;font-weight:800;letter-spacing:-.03em;line-height:1;margin:10px 0 4px}
+.out .big small{font-size:18px;font-weight:600;opacity:.7}
+.out ul{list-style:none;margin:22px 0;font-size:14px}
+.out li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between}
+.out .btn{background:#7fd6c9;color:var(--ink);border-color:#7fd6c9;margin-top:auto}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.seg button{padding:14px 8px;border:1px solid var(--line-strong);border-radius:10px;background:var(--bg);cursor:pointer;font-size:13px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:6px}
+.seg button svg{width:22px;height:22px;color:var(--accent)}
+.seg button.on{border-color:var(--accent);background:var(--soft);box-shadow:0 0 0 2px var(--accent) inset}
+.rng{display:flex;justify-content:space-between;font-weight:700;margin-bottom:6px}
+input[type=range]{width:100%;accent-color:#0e7c74}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{display:flex;gap:10px;align-items:center;padding:11px 14px;border:1px solid var(--line-strong);border-radius:10px;font-size:14px;cursor:pointer}
+.opt input{accent-color:#0e7c74;width:16px;height:16px}
+.plans .card{display:flex;flex-direction:column;position:relative}
+.plans .card.pop{border:2px solid var(--accent);box-shadow:0 20px 40px rgba(14,124,116,.12)}
+.plans .badge{position:absolute;top:-12px;left:28px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px}
+.plans .p{font-size:40px;font-weight:800;letter-spacing:-.03em;margin:12px 0}
+.plans .p small{font-size:15px;font-weight:600;opacity:.6}
+.plans ul{list-style:none;margin:8px 0 24px;font-size:14px}
+.plans li{display:flex;gap:10px;padding:7px 0}
+.plans li svg{width:18px;height:18px;color:var(--accent);flex:none}
+.plans .btn{margin-top:auto}
+.zone{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.zone-check{display:flex;gap:10px;margin-top:22px}
+.zone-check input{flex:1}
+.map{aspect-ratio:1.2;border-radius:20px;background:radial-gradient(circle at 50% 50%,rgba(14,124,116,.25) 0 22%,rgba(14,124,116,.12) 22% 42%,rgba(14,124,116,.05) 42% 62%,transparent 62%),linear-gradient(#e9f3f1,#e9f3f1);position:relative;overflow:hidden;border:1px solid var(--line)}
+.map::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:36px 36px;opacity:.7}
+.map .pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);color:var(--accent)}
+.map .pin svg{width:42px;height:42px;fill:#fff}
+.map .tag{position:absolute;background:#fff;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.clients{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.clients span{padding:8px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:13px;font-weight:600}
+.qual .card{text-align:center}.qual .ico{margin:0 auto 14px}
+@media (max-width:960px){.calc,.zone{grid-template-columns:1fr}}
+@media (max-width:760px){.seg{grid-template-columns:repeat(2,1fr)}.opts{grid-template-columns:1fr}.calc .in,.calc .out{padding:22px}.out .big{font-size:44px}}
+</style></head>
+<body>
+<div class="demo"><a href="./" style="text-decoration:underline">← Toutes les maquettes</a> · Maquette de démonstration, contenus fictifs · réalisée par <a href="../" style="text-decoration:underline">Einat Guedj</a></div>
+
+<header class="nav"><div class="wrap">
+ <a href="#" class="logo" style="font-weight:800">Clair<span style="color:var(--accent)">&</span>Net<small>Propreté professionnelle</small></a>
+ <nav class="links"><a href="#devis">Devis instantané</a><a href="#formules">Formules</a><a href="#zones">Zones</a><a href="#qualite">Qualité</a><a href="#contact">Contact</a></nav>
+ <a href="#devis" class="btn sm">Mon devis en 1 min</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <div>
+  <span class="eyebrow">Bureaux · Commerces · Copropriétés · Fin de chantier</span>
+  <h1>Des locaux impeccables, <span>sans y penser</span>.</h1>
+  <p class="lead">Nettoyage régulier ou ponctuel, équipes formées et assurées, produits éco-labellisés. Votre devis s'affiche en direct, sans rendez-vous.</p>
+  <div class="ctas"><a href="#devis" class="btn">Calculer mon tarif</a><a href="#formules" class="btn ghost">Voir les abonnements</a></div>
+  <div class="trust"><div><b>48 h</b>pour démarrer</div><div><b>4,9/5</b>satisfaction client</div><div><b>100 %</b>produits écolabel</div></div>
+ </div>
+ <div class="visual"><span class="bubble" style="width:180px;height:180px;top:30px;right:40px"></span><span class="bubble" style="width:70px;height:70px;top:200px;right:200px"></span><span class="bubble" style="width:110px;height:110px;top:70px;left:40px"></span>
+  <div class="live"><p style="font-size:13px;font-weight:700;margin-bottom:8px"><span class="dot"></span>Intervention en cours</p><div class="row"><span>Site</span><b>Bureaux, 3e étage</b></div><div class="row"><span>Équipe</span><b>2 agents</b></div><div class="row"><span>Check-list</span><b>18/24 tâches</b></div><div class="row"><span>Fin prévue</span><b>07:45</b></div></div>
+ </div>
+</div></section>
+
+<section class="alt" id="devis"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Devis instantané</span><h2>Votre tarif, en direct</h2></div><p>Ajustez les curseurs : le prix se met à jour. Aucune inscription nécessaire.</p></div>
+ <div class="calc">
+  <div class="in">
+   <div class="field"><label>Type de locaux</label><div class="seg" id="seg">
+    <button class="on" data-r="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>Bureaux</button><button data-r="1.15"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Commerce</button><button data-r="0.85"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 4 6"/></svg>Copropriété</button><button data-r="1.6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg>Fin de chantier</button></div></div>
+   <div class="field"><div class="rng"><label>Surface</label><span id="sv">150 m²</span></div><input type="range" id="surf" min="30" max="1500" step="10" value="150"></div>
+   <div class="field"><div class="rng"><label>Fréquence</label><span id="fv">2 fois par semaine</span></div><input type="range" id="freq" min="0" max="4" step="1" value="2"></div>
+   <div class="field"><label>Options</label><div class="opts">
+    <label class="opt"><input type="checkbox" data-o="0.12">Vitres intérieures</label><label class="opt"><input type="checkbox" data-o="0.08">Produits sanitaires fournis</label>
+    <label class="opt"><input type="checkbox" data-o="0.15">Horaires avant 8 h</label><label class="opt"><input type="checkbox" data-o="0.1">Désinfection renforcée</label></div></div>
+  </div>
+  <div class="out">
+   <span style="font-size:13px;opacity:.7;font-weight:600;letter-spacing:.1em;text-transform:uppercase" id="per">Estimation mensuelle HT</span>
+   <div class="big" id="price">—</div><span style="font-size:13px;opacity:.7">Sans engagement · résiliable à tout moment</span>
+   <ul><li><span>Passages</span><b id="pass">—</b></li><li><span>Durée par passage</span><b id="dur">—</b></li><li><span>Prix par passage</span><b id="ppp">—</b></li></ul>
+   <a href="#contact" class="btn">Recevoir ce devis par e-mail</a>
+  </div>
+ </div>
+</div></section>
+
+<section id="formules"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Abonnements</span><h2>Une formule pour chaque rythme</h2></div><p>Prix indicatifs pour 150 m² de bureaux. Le même interlocuteur tout au long du contrat.</p></div>
+ <div class="grid g3 plans">
+  <div class="card"><h3>Essentiel</h3><p>Pour les petites équipes.</p><div class="p">290 €<small> HT/mois</small></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>1 passage par semaine</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Sols, poubelles, sanitaires</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Rapport après chaque passage</li></ul><a href="#contact" class="btn ghost">Choisir</a></div>
+  <div class="card pop"><span class="badge">Le plus choisi</span><h3>Confort</h3><p>Pour des bureaux toujours prêts.</p><div class="p">540 €<small> HT/mois</small></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>2 à 3 passages par semaine</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Cuisine, vitres intérieures</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Remplacement d'agent garanti</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Espace client et check-lists</li></ul><a href="#contact" class="btn">Choisir</a></div>
+  <div class="card"><h3>Premium</h3><p>Pour les sites qui reçoivent du public.</p><div class="p">990 €<small> HT/mois</small></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Passage quotidien</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Consommables fournis</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Contrôle qualité mensuel</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Intervention urgente sous 4 h</li></ul><a href="#contact" class="btn ghost">Choisir</a></div>
+ </div>
+</div></section>
+
+<section class="alt" id="zones"><div class="wrap zone">
+ <div><span class="eyebrow">Zones d'intervention</span><h2>Intervenez-vous chez moi&nbsp;?</h2><p class="lead">Entrez votre code postal pour le savoir tout de suite.</p>
+  <div class="zone-check"><input type="text" id="cp" placeholder="Ex. 75011" maxlength="5" inputmode="numeric"><button class="btn" id="cpBtn">Vérifier</button></div>
+  <div class="ok" id="cpOk"></div>
+  <div class="clients"><span>Paris</span><span>Hauts-de-Seine</span><span>Seine-Saint-Denis</span><span>Val-de-Marne</span><span>Yvelines (sur devis)</span></div>
+ </div>
+ <div class="map"><span class="tag" style="top:18%;left:14%">Zone 1 · sans frais</span><span class="tag" style="top:70%;right:10%">Zone 2 · +5 %</span><span class="tag" style="bottom:8%;left:10%">Zone 3 · sur devis</span><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div></div>
+</div></section>
+
+<section id="qualite"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Nos engagements</span><h2>La qualité, vérifiée à chaque passage</h2></div></div>
+ <div class="grid g4 qual">
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Assurés</h3><p>Responsabilité civile pro et agents déclarés.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><h3>Check-lists</h3><p>Chaque tâche cochée, photo à l'appui.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19l8-8"/></svg></div><h3>Éco-responsables</h3><p>Produits écolabel, microfibres lavables.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Réactifs</h3><p>Un souci ? Réponse sous 2 h ouvrées.</p></div>
+ </div>
+</div></section>
+
+<section class="alt" id="contact"><div class="wrap"><div class="grid g2" style="gap:48px;align-items:start">
+ <div><span class="eyebrow">Visite gratuite</span><h2>Demandez une visite sur site</h2><p class="lead">Un responsable passe gratuitement évaluer vos locaux et confirme le devis sous 24 h.</p></div>
+ <form class="card" data-ok="fOk"><div class="row2"><div class="field"><label>Société</label><input type="text"></div><div class="field"><label>Contact</label><input type="text"></div></div><div class="row2"><div class="field"><label>E-mail</label><input type="email"></div><div class="field"><label>Téléphone</label><input type="tel"></div></div><div class="field"><label>Date souhaitée pour la visite</label><input type="date"></div><button class="btn" style="width:100%">Planifier la visite</button><div class="ok" id="fOk">C'est noté ! Nous vous appelons pour confirmer le créneau.</div></form>
+</div></div></section>
+
+<footer><div class="wrap"><span>Clair&Net · Société fictive</span><span>Mentions légales · CGV · Charte RSE</span></div></footer>
+
+<script>
+document.querySelectorAll('.g3,.g4,.pf').forEach(g=>{const h=document.createElement('p');h.className='swipe-hint';h.textContent='Faites glisser →';g.before(h)});
+document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('nav.links').classList.toggle('open'));
+document.querySelectorAll('nav.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav.links').classList.remove('open')));
+document.querySelectorAll('form[data-ok]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const o=document.getElementById(f.dataset.ok);o.classList.add('show');f.reset&&0;}));
+
+const F=[['1 fois par mois',1],['1 fois par semaine',4.33],['2 fois par semaine',8.66],['3 fois par semaine',13],['Tous les jours ouvrés',21.7]];
+let rate=1;
+function calc(){const s=+surf.value,f=F[+freq.value];sv.textContent=s+' m²';fv.textContent=f[0];
+const ponctuel=rate==1.6;let opt=1;document.querySelectorAll('.opt input:checked').forEach(o=>opt+=+o.dataset.o);
+const h=Math.max(1,s/120*(ponctuel?2.2:1));const pp=Math.max(55,h*32*rate*opt);
+const n=ponctuel?1:f[1];const tot=Math.round(pp*n/5)*5;
+price.innerHTML=tot.toLocaleString('fr-FR').replace(/\s/g,'\u00a0')+' €<small>'+(ponctuel?' HT':' HT/mois')+'</small>';per.textContent=ponctuel?'Estimation intervention unique HT':'Estimation mensuelle HT';
+pass.textContent=ponctuel?'1 intervention':('≈ '+Math.round(n)+' par mois');dur.textContent=(Math.round(h*2)/2).toString().replace('.',',')+' h';ppp.textContent=Math.round(pp)+' €';
+freq.disabled=ponctuel;freq.style.opacity=ponctuel?.4:1}
+document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');rate=+b.dataset.r;calc()});
+[surf,freq].forEach(x=>x.oninput=calc);document.querySelectorAll('.opt input').forEach(x=>x.onchange=calc);calc();
+cpBtn.onclick=()=>{const v=cp.value.trim(),d=v.slice(0,2);let m;if(!/^\d{5}$/.test(v))m='Entrez un code postal à 5 chiffres.';else if(d=='75')m='✓ Oui ! '+v+' est en zone 1 : aucun frais de déplacement.';else if(['92','93','94'].includes(d))m='✓ Oui ! '+v+' est en zone 2 : +5 % de frais de déplacement.';else if(['78','91','95','77'].includes(d))m=v+' est en zone 3 : nous intervenons sur devis.';else m='Cette zone n\'est pas encore couverte. Laissez-nous vos coordonnées, nous vous prévenons dès l\'ouverture.';cpOk.textContent=m;cpOk.classList.add('show')};
+</script>
+</body></html>

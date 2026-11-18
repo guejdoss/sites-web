@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Talento · Recrutement & RH</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤝</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#f7f7fb;--bg2:#eeeef7;--card:#ffffff;--ink:#16163a;--accent:#4b3fd8;--accent-ink:#4b3fd8;--on-accent:#ffffff;--soft:#e6e3fc;--line:#e3e3ef;--line-strong:#cdcde0;--radius:10px;--radius-lg:16px;--display:'Bricolage Grotesque',system-ui,sans-serif;--body:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+.demo{background:var(--ink);color:var(--bg);font-size:12px;letter-spacing:.04em;text-align:center;padding:7px 16px}
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:24px}
+.logo{font-family:var(--display);font-size:22px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
+.logo small{display:block;font-family:var(--body);font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.6;font-weight:500;margin-top:-2px}
+nav.links{display:flex;gap:28px;font-size:14px}
+nav.links a{opacity:.75;transition:.2s}
+nav.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:var(--radius);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:15px;border:1px solid var(--accent);cursor:pointer;transition:.2s;white-space:nowrap}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn.sm{padding:9px 16px;font-size:14px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin-bottom:14px;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(38px,5.4vw,66px)}
+h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:14px}
+h3{font-size:21px;margin-bottom:6px}
+.lead{font-size:18px;opacity:.78;max-width:640px}
+section{padding:84px 0}
+section.alt{background:var(--bg2)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head p{max-width:520px;opacity:.75}
+.grid{display:grid;gap:22px}
+.grid>*{min-width:0}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px}
+.card p{opacity:.75;font-size:15px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--accent-ink);margin-bottom:18px}
+.ico svg{width:22px;height:22px}
+.hero{padding:76px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero p.lead{margin:22px 0 32px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;font-size:14px;opacity:.75}
+.trust b{display:block;font-family:var(--display);font-size:26px;opacity:1;color:var(--ink)}
+.visual{border-radius:var(--radius-lg);min-height:440px;position:relative;overflow:hidden}
+label{font-size:13px;font-weight:600;display:block;margin-bottom:6px;opacity:.85}
+.field{margin-bottom:16px}
+input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line-strong);border-radius:calc(var(--radius) - 2px);background:var(--bg);outline:none;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--soft)}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;cursor:pointer;font-size:14px;transition:.2s}
+.chip.on,.chip:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.note{font-size:13px;opacity:.65}
+.ok{display:none;padding:14px 16px;border-radius:var(--radius);background:var(--soft);color:var(--accent-ink);font-weight:600;margin-top:14px}
+.ok.show{display:block}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font-size:22px;line-height:1;opacity:.6}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:10px;opacity:.75}
+footer{padding:36px 0;border-top:1px solid var(--line);font-size:13px;opacity:.8}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
+.swipe-hint{display:none;font-size:12px;opacity:.55;margin:-6px 0 12px;letter-spacing:.04em}
+.feat-tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--accent-ink);font-weight:700;margin-bottom:12px}
+@media (max-width:960px){
+ .g3,.g4{grid-template-columns:repeat(2,1fr)}
+ .hero .wrap{grid-template-columns:1fr;gap:36px}
+ .visual{min-height:300px}
+}
+@media (max-width:760px){
+ .wrap{padding:0 18px}
+ section{padding:56px 0}
+ .hero{padding:44px 0 56px}
+ nav.links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;padding:18px;gap:16px;border-bottom:1px solid var(--line)}
+ nav.links.open{display:flex}
+ .burger{display:block}
+ header.nav .btn{display:none}
+ .g2,.row2{grid-template-columns:1fr}
+ .g3,.g4,.pf{display:grid;grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:minmax(250px,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 18px 14px;margin-inline:-18px;scroll-padding-inline:18px;scrollbar-width:thin;gap:14px}
+ .g3>*,.g4>*,.pf>*{scroll-snap-align:start}
+ .swipe-hint{display:block!important}
+ .card{padding:22px}
+ .lead{font-size:16px}
+ .trust{gap:20px}
+}
+
+h1,h2,h3{font-weight:800;letter-spacing:-.025em}
+h1 span{background:linear-gradient(90deg,#4b3fd8,#9b6bf2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.switch{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:26px}
+.switch button{border:0;background:none;padding:9px 18px;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer}
+.switch button.on{background:var(--ink);color:#fff}
+.aud{display:none}.aud.on{display:block}
+.search{display:flex;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 18px 40px rgba(22,22,58,.07)}
+.search input{border:0!important;box-shadow:none!important;background:transparent}
+.search select{border:0!important;box-shadow:none!important;width:auto;background:transparent;border-left:1px solid var(--line)!important;border-radius:0}
+.visual{background:linear-gradient(150deg,#16163a,#2c2a7a 60%,#4b3fd8);padding:28px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.mini{background:#fff;border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 12px 30px rgba(0,0,0,.2);position:relative}
+.mini:nth-child(2){margin-left:36px}.mini:nth-child(3){margin-left:12px}
+.av{width:40px;height:40px;border-radius:50%;flex:none}
+.mini b{font-size:14px;display:block}.mini span{font-size:12px;opacity:.6}
+.mini .st{margin-left:auto;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.jobs-wrap{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:start}
+.side-f{position:sticky;top:90px}
+.side-f h4{font-size:13px;text-transform:uppercase;letter-spacing:.12em;opacity:.6;margin:18px 0 10px}
+.side-f label{display:flex;gap:10px;align-items:center;font-weight:500;font-size:14px;margin-bottom:8px;cursor:pointer}
+.side-f input{accent-color:#4b3fd8;width:16px;height:16px}
+.job{display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:12px;transition:.2s}
+.job:hover{border-color:var(--accent);box-shadow:0 10px 30px rgba(75,63,216,.1)}
+.job .lg{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font-weight:800;color:#fff;font-size:18px}
+.job h3{font-size:18px;margin-bottom:6px}
+.job .m{display:flex;gap:8px;flex-wrap:wrap}
+.pill{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--bg2)}
+.pill.new{background:#dcfce7;color:#166534}
+.job.hide{display:none}
+.count{font-size:14px;opacity:.7;margin-bottom:14px}
+.modal{position:fixed;inset:0;background:rgba(22,22,58,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:16px}
+.modal.on{display:flex}
+.modal .box{background:var(--bg);border-radius:20px;max-width:560px;width:100%;padding:32px;max-height:92vh;overflow:auto}
+.drop{border:2px dashed var(--line-strong);border-radius:12px;padding:22px;text-align:center;font-size:14px;cursor:pointer;background:var(--card)}
+.drop b{color:var(--accent)}
+.x{float:right;background:none;border:0;font-size:28px;cursor:pointer;line-height:1}
+.space{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.space .card{padding:32px}
+.space .card.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.space .card.dark p{opacity:.75}
+.space ul{list-style:none;margin:18px 0 24px}
+.space li{display:flex;gap:10px;padding:8px 0;font-size:15px}
+.space li svg{width:18px;height:18px;color:#9b8cff;flex:none;margin-top:2px}
+.space .card:not(.dark) li svg{color:var(--accent)}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.kpi div{background:rgba(255,255,255,.08);border-radius:10px;padding:12px}
+.kpi b{font-size:24px;display:block}.kpi span{font-size:12px;opacity:.7}
+.pipe{display:flex;gap:6px;margin-top:6px}
+.pipe div{flex:1;background:var(--bg2);border-radius:8px;padding:10px;font-size:12px;font-weight:700;text-align:center}
+.pipe div.on{background:var(--accent);color:#fff}
+.svc .card h3{font-size:19px}
+@media (max-width:960px){.jobs-wrap{grid-template-columns:1fr}.side-f{position:static;display:flex;gap:18px;flex-wrap:wrap}.side-f h4{width:100%;margin:6px 0 0}}
+@media (max-width:760px){.space{grid-template-columns:1fr}.search{flex-direction:column}.search select{border-left:0!important;border-top:1px solid var(--line)!important}.job{grid-template-columns:44px 1fr}.job .lg{width:44px;height:44px}.job .btn{grid-column:1/-1}.mini:nth-child(2){margin-left:18px}}
+</style></head>
+<body>
+<div class="demo"><a href="./" style="text-decoration:underline">← Toutes les maquettes</a> · Maquette de démonstration, contenus fictifs · réalisée par <a href="../" style="text-decoration:underline">Einat Guedj</a></div>
+
+<header class="nav"><div class="wrap">
+ <a href="#" class="logo" style="font-weight:800">Talento<span style="color:var(--accent)">.</span><small>Recrutement & conseil RH</small></a>
+ <nav class="links"><a href="#offres">Offres</a><a href="#espaces">Espaces</a><a href="#services">Entreprises</a><a href="#contact">Contact</a></nav>
+ <a href="#espaces" class="btn sm">Se connecter</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <div>
+  <div class="switch"><button class="on" data-a="cand">Je cherche un poste</button><button data-a="ent">Je recrute</button></div>
+  <div class="aud on" id="a-cand"><h1>Le bon poste, <span>sans chercher</span> pendant des mois.</h1><p class="lead">Des offres vérifiées, un consultant qui vous suit, et une réponse à chaque candidature. Toujours.</p>
+   <div class="search"><input type="text" id="q" placeholder="Métier, mot-clé…"><select id="qv"><option value="">Toutes les villes</option><option>Paris</option><option>Lyon</option><option>Bordeaux</option><option>Télétravail</option></select><a href="#offres" class="btn" id="go">Rechercher</a></div></div>
+  <div class="aud" id="a-ent"><h1>Recrutez les bons profils, <span>2 fois plus vite</span>.</h1><p class="lead">Chasse, présélection, entretiens et intégration : nous vous présentons 3 candidats qualifiés sous 15 jours.</p>
+   <div class="ctas"><a href="#contact" class="btn">Confier un recrutement</a><a href="#services" class="btn ghost">Nos offres RH</a></div></div>
+  <div class="trust"><div><b>15 jours</b>pour une shortlist</div><div><b>92 %</b>en poste après 1 an</div><div><b>100 %</b>des candidats ont une réponse</div></div>
+ </div>
+ <div class="visual">
+  <div class="mini"><div class="av" style="background:linear-gradient(135deg,#f4c9b5,#d9502e)"></div><div><b>Candidature reçue</b><span>Responsable commercial B2B</span></div><span class="st" style="background:#e6e3fc;color:#4b3fd8">Nouveau</span></div>
+  <div class="mini"><div class="av" style="background:linear-gradient(135deg,#bde0fe,#2563eb)"></div><div><b>Entretien planifié</b><span>Jeudi · 10:30 · visio</span></div><span class="st" style="background:#fef3c7;color:#92400e">Entretien</span></div>
+  <div class="mini"><div class="av" style="background:linear-gradient(135deg,#bbf7d0,#0e7c74)"></div><div><b>Offre acceptée</b><span>Comptable confirmé·e</span></div><span class="st" style="background:#dcfce7;color:#166534">Recruté</span></div>
+ </div>
+</div></section>
+
+<section class="alt" id="offres"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Offres d'emploi</span><h2>Les postes du moment</h2></div><p>Filtrez par contrat et secteur. Postulez en 1 minute avec votre CV.</p></div>
+ <div class="jobs-wrap">
+  <div class="side-f">
+   <h4>Contrat</h4><label><input type="checkbox" class="fc" value="CDI">CDI</label><label><input type="checkbox" class="fc" value="CDD">CDD</label><label><input type="checkbox" class="fc" value="Freelance">Freelance</label><label><input type="checkbox" class="fc" value="Intérim">Intérim</label>
+   <h4>Secteur</h4><label><input type="checkbox" class="fs" value="Commerce">Commerce</label><label><input type="checkbox" class="fs" value="Finance">Finance</label><label><input type="checkbox" class="fs" value="RH">RH</label><label><input type="checkbox" class="fs" value="Tech">Tech</label><label><input type="checkbox" class="fs" value="Marketing">Marketing</label><label><input type="checkbox" class="fs" value="Industrie">Industrie</label><label><input type="checkbox" class="fs" value="Administration">Administration</label>
+  </div>
+  <div><p class="count" id="count"></p><div class="job" data-v="Paris" data-c="CDI" data-s="Commerce" data-t="responsable commercial b2b"><div class="lg" style="background:#4b3fd8">R</div><div><h3>Responsable commercial B2B</h3><div class="m"><span class="pill">Paris</span><span class="pill">CDI</span><span class="pill">45-55 k€</span><span class="pill new">Nouveau</span></div></div><button class="btn sm apply" data-j="Responsable commercial B2B">Postuler</button></div><div class="job" data-v="Lyon" data-c="CDI" data-s="Finance" data-t="comptable confirmé·e"><div class="lg" style="background:#0e7c74">C</div><div><h3>Comptable confirmé·e</h3><div class="m"><span class="pill">Lyon</span><span class="pill">CDI</span><span class="pill">38-42 k€</span></div></div><button class="btn sm apply" data-j="Comptable confirmé·e">Postuler</button></div><div class="job" data-v="Paris" data-c="CDD" data-s="RH" data-t="chargé·e de recrutement"><div class="lg" style="background:#9b6bf2">C</div><div><h3>Chargé·e de recrutement</h3><div class="m"><span class="pill">Paris</span><span class="pill">CDD</span><span class="pill">32-36 k€</span><span class="pill new">Nouveau</span></div></div><button class="btn sm apply" data-j="Chargé·e de recrutement">Postuler</button></div><div class="job" data-v="Télétravail" data-c="CDI" data-s="Tech" data-t="développeur·se full-stack"><div class="lg" style="background:#16163a">D</div><div><h3>Développeur·se full-stack</h3><div class="m"><span class="pill">Télétravail</span><span class="pill">CDI</span><span class="pill">50-60 k€</span></div></div><button class="btn sm apply" data-j="Développeur·se full-stack">Postuler</button></div><div class="job" data-v="Bordeaux" data-c="CDI" data-s="Administration" data-t="assistant·e de direction"><div class="lg" style="background:#d9502e">A</div><div><h3>Assistant·e de direction</h3><div class="m"><span class="pill">Bordeaux</span><span class="pill">CDI</span><span class="pill">30-34 k€</span></div></div><button class="btn sm apply" data-j="Assistant·e de direction">Postuler</button></div><div class="job" data-v="Paris" data-c="Freelance" data-s="Marketing" data-t="chef·fe de projet marketing"><div class="lg" style="background:#c08a1e">C</div><div><h3>Chef·fe de projet marketing</h3><div class="m"><span class="pill">Paris</span><span class="pill">Freelance</span><span class="pill">450 €/jour</span><span class="pill new">Nouveau</span></div></div><button class="btn sm apply" data-j="Chef·fe de projet marketing">Postuler</button></div><div class="job" data-v="Lyon" data-c="Intérim" data-s="Industrie" data-t="technicien·ne de maintenance"><div class="lg" style="background:#2563eb">T</div><div><h3>Technicien·ne de maintenance</h3><div class="m"><span class="pill">Lyon</span><span class="pill">Intérim</span><span class="pill">2 300 €/mois</span></div></div><button class="btn sm apply" data-j="Technicien·ne de maintenance">Postuler</button></div><div class="card" style="text-align:center;display:none" id="none"><p>Aucune offre ne correspond. <a href="#espaces" style="color:var(--accent);font-weight:700">Créez une alerte</a> pour être prévenu·e.</p></div></div>
+ </div>
+</div></section>
+
+<div class="modal" id="modal"><div class="box"><button class="x" id="mx">×</button><span class="eyebrow">Candidature</span><h2 id="mj" style="font-size:26px"></h2>
+ <form id="af" style="margin-top:18px"><div class="row2"><div class="field"><label>Prénom</label><input type="text" required></div><div class="field"><label>Nom</label><input type="text" required></div></div><div class="field"><label>E-mail</label><input type="email" required></div>
+ <div class="field"><label>CV</label><label class="drop" style="display:block;font-weight:500"><input type="file" hidden id="cv"><span id="cvn"><b>Déposez votre CV</b> ou cliquez (PDF, Word)</span></label></div>
+ <div class="field"><label>Quelques mots (facultatif)</label><textarea style="min-height:80px"></textarea></div>
+ <label style="display:flex;gap:10px;font-weight:500;align-items:center"><input type="checkbox" checked style="accent-color:#4b3fd8"> Me proposer des offres similaires</label>
+ <button class="btn" style="width:100%;margin-top:14px">Envoyer ma candidature</button><div class="ok" id="aOk">Candidature envoyée ✓ Vous pouvez suivre son avancement dans votre espace candidat.</div></form></div></div>
+
+<section id="espaces"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Espaces personnels</span><h2>Chacun son espace, tout au même endroit</h2></div></div>
+ <div class="space">
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 4 6"/></svg></div><h3>Espace candidat</h3><p>Suivez vos candidatures en temps réel.</p>
+   <div class="pipe"><div>Envoyée</div><div class="on">Lue</div><div>Entretien</div><div>Réponse</div></div>
+   <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Alertes e-mail sur vos critères</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>CV enregistré, candidature en 1 clic</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Conseils entretien et salaire</li></ul><a href="#" class="btn ghost">Créer mon espace</a></div>
+  <div class="card dark"><div class="ico" style="background:rgba(255,255,255,.1);color:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></div><h3>Espace entreprise</h3><p>Publiez vos offres et suivez vos recrutements.</p>
+   <div class="kpi"><div><b>3</b><span>postes ouverts</span></div><div><b>47</b><span>candidatures</span></div><div><b>6</b><span>entretiens</span></div></div>
+   <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Shortlist commentée par votre consultant</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Planning d'entretiens partagé</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg>Factures et contrats en ligne</li></ul><a href="#" class="btn" style="background:#fff;color:var(--ink);border-color:#fff">Accéder à l'espace</a></div>
+ </div>
+</div></section>
+
+<section class="alt" id="services"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Pour les entreprises</span><h2>Des services RH à la carte</h2></div><p>Pour les TPE et PME qui n'ont pas de service RH, ou qui veulent le renforcer.</p></div>
+ <div class="grid g4 svc">
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 4 6"/></svg></div><h3>Recrutement</h3><p>Au succès : 15 % du salaire annuel brut.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><h3>Onboarding</h3><p>Parcours d'intégration clé en main.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v11H9l-5 4z"/></svg></div><h3>RH à temps partagé</h3><p>Un DRH 1 jour par semaine ou par mois.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg></div><h3>Marque employeur</h3><p>Page carrière, offres qui attirent.</p></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="grid g2" style="gap:48px;align-items:start">
+ <div><span class="eyebrow">Confier un recrutement</span><h2>Décrivez le poste, on s'occupe du reste</h2><p class="lead">Un consultant vous rappelle sous 24 h pour cadrer le besoin.</p></div>
+ <form class="card" data-ok="fOk"><div class="row2"><div class="field"><label>Entreprise</label><input type="text"></div><div class="field"><label>Effectif</label><select><option>1-10</option><option>11-50</option><option>51-250</option><option>250+</option></select></div></div><div class="row2"><div class="field"><label>Poste à pourvoir</label><input type="text"></div><div class="field"><label>Date d'arrivée souhaitée</label><input type="date"></div></div><div class="field"><label>E-mail</label><input type="email"></div><button class="btn" style="width:100%">Être rappelé</button><div class="ok" id="fOk">Merci ! Un consultant vous rappelle sous 24 h.</div></form>
+</div></div></section>
+
+<footer><div class="wrap"><span>Talento · Cabinet fictif</span><span>Mentions légales · RGPD · Charte de non-discrimination</span></div></footer>
+
+<script>
+document.querySelectorAll('.g3,.g4,.pf').forEach(g=>{const h=document.createElement('p');h.className='swipe-hint';h.textContent='Faites glisser →';g.before(h)});
+document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('nav.links').classList.toggle('open'));
+document.querySelectorAll('nav.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav.links').classList.remove('open')));
+document.querySelectorAll('form[data-ok]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const o=document.getElementById(f.dataset.ok);o.classList.add('show');f.reset&&0;}));
+
+document.querySelectorAll('.switch button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.switch button,.aud').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('a-'+b.dataset.a).classList.add('on')});
+function f(){const c=[...document.querySelectorAll('.fc:checked')].map(x=>x.value),s=[...document.querySelectorAll('.fs:checked')].map(x=>x.value),t=q.value.toLowerCase().trim(),v=qv.value;let n=0;
+document.querySelectorAll('.job').forEach(j=>{const ok=(!c.length||c.includes(j.dataset.c))&&(!s.length||s.includes(j.dataset.s))&&(!t||j.dataset.t.includes(t)||j.dataset.s.toLowerCase().includes(t))&&(!v||j.dataset.v==v);j.classList.toggle('hide',!ok);if(ok)n++});
+count.textContent=n+' offre'+(n>1?'s':'')+' disponible'+(n>1?'s':'');none.style.display=n?'none':'block'}
+document.querySelectorAll('.fc,.fs').forEach(x=>x.onchange=f);q.oninput=f;qv.onchange=f;f();
+const M=document.getElementById('modal');document.querySelectorAll('.apply').forEach(b=>b.onclick=()=>{mj.textContent=b.dataset.j;aOk.classList.remove('show');M.classList.add('on')});
+mx.onclick=()=>M.classList.remove('on');M.onclick=e=>{if(e.target==M)M.classList.remove('on')};
+cv.onchange=()=>{if(cv.files[0])cvn.innerHTML='<b>✓ '+cv.files[0].name+'</b>'};
+af.onsubmit=e=>{e.preventDefault();aOk.classList.add('show')};
+</script>
+</body></html>

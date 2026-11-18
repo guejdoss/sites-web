@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Cabinet Valmont · Avocat</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#f7f5f0;--bg2:#efebe3;--card:#fffdf9;--ink:#1b2230;--accent:#1b2a44;--accent-ink:#8a6a2f;--on-accent:#f7f5f0;--soft:#efe6d3;--line:#e2ddd2;--line-strong:#cfc8ba;--radius:6px;--radius-lg:10px;--display:'Cormorant Garamond',Georgia,serif;--body:'Libre Franklin',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+.demo{background:var(--ink);color:var(--bg);font-size:12px;letter-spacing:.04em;text-align:center;padding:7px 16px}
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:24px}
+.logo{font-family:var(--display);font-size:22px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
+.logo small{display:block;font-family:var(--body);font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.6;font-weight:500;margin-top:-2px}
+nav.links{display:flex;gap:28px;font-size:14px}
+nav.links a{opacity:.75;transition:.2s}
+nav.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:var(--radius);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:15px;border:1px solid var(--accent);cursor:pointer;transition:.2s;white-space:nowrap}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn.sm{padding:9px 16px;font-size:14px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin-bottom:14px;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(38px,5.4vw,66px)}
+h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:14px}
+h3{font-size:21px;margin-bottom:6px}
+.lead{font-size:18px;opacity:.78;max-width:640px}
+section{padding:84px 0}
+section.alt{background:var(--bg2)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head p{max-width:520px;opacity:.75}
+.grid{display:grid;gap:22px}
+.grid>*{min-width:0}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px}
+.card p{opacity:.75;font-size:15px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--accent-ink);margin-bottom:18px}
+.ico svg{width:22px;height:22px}
+.hero{padding:76px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero p.lead{margin:22px 0 32px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;font-size:14px;opacity:.75}
+.trust b{display:block;font-family:var(--display);font-size:26px;opacity:1;color:var(--ink)}
+.visual{border-radius:var(--radius-lg);min-height:440px;position:relative;overflow:hidden}
+label{font-size:13px;font-weight:600;display:block;margin-bottom:6px;opacity:.85}
+.field{margin-bottom:16px}
+input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line-strong);border-radius:calc(var(--radius) - 2px);background:var(--bg);outline:none;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--soft)}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;cursor:pointer;font-size:14px;transition:.2s}
+.chip.on,.chip:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.note{font-size:13px;opacity:.65}
+.ok{display:none;padding:14px 16px;border-radius:var(--radius);background:var(--soft);color:var(--accent-ink);font-weight:600;margin-top:14px}
+.ok.show{display:block}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font-size:22px;line-height:1;opacity:.6}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:10px;opacity:.75}
+footer{padding:36px 0;border-top:1px solid var(--line);font-size:13px;opacity:.8}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
+.swipe-hint{display:none;font-size:12px;opacity:.55;margin:-6px 0 12px;letter-spacing:.04em}
+.feat-tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--accent-ink);font-weight:700;margin-bottom:12px}
+@media (max-width:960px){
+ .g3,.g4{grid-template-columns:repeat(2,1fr)}
+ .hero .wrap{grid-template-columns:1fr;gap:36px}
+ .visual{min-height:300px}
+}
+@media (max-width:760px){
+ .wrap{padding:0 18px}
+ section{padding:56px 0}
+ .hero{padding:44px 0 56px}
+ nav.links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;padding:18px;gap:16px;border-bottom:1px solid var(--line)}
+ nav.links.open{display:flex}
+ .burger{display:block}
+ header.nav .btn{display:none}
+ .g2,.row2{grid-template-columns:1fr}
+ .g3,.g4,.pf{display:grid;grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:minmax(250px,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 18px 14px;margin-inline:-18px;scroll-padding-inline:18px;scrollbar-width:thin;gap:14px}
+ .g3>*,.g4>*,.pf>*{scroll-snap-align:start}
+ .swipe-hint{display:block!important}
+ .card{padding:22px}
+ .lead{font-size:16px}
+ .trust{gap:20px}
+}
+
+h1{font-weight:500}h1 em{font-style:italic;color:var(--accent-ink)}
+.visual{background:linear-gradient(160deg,#1b2a44 0%,#26385a 55%,#3b4b68 100%);color:#f7f5f0;padding:36px;display:flex;flex-direction:column;justify-content:flex-end}
+.visual::before{content:"";position:absolute;inset:24px;border:1px solid rgba(214,190,140,.35);border-radius:6px}
+.visual .quote{font-family:var(--display);font-size:28px;line-height:1.25;position:relative;max-width:360px}
+.visual .sig{position:relative;margin-top:18px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:#d6be8c}
+.visual .monogram{position:absolute;top:44px;right:48px;font-family:var(--display);font-size:120px;line-height:1;color:rgba(214,190,140,.22)}
+.dom-tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.dom-tabs button{background:none;border:0;padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;opacity:.55;border-bottom:2px solid transparent;white-space:nowrap}
+.dom-tabs button.on{opacity:1;border-color:var(--accent-ink)}
+.dom-panel{display:none;grid-template-columns:1.2fr 1fr;gap:40px}
+.dom-panel.on{display:grid}
+.dom-panel ul{list-style:none}
+.dom-panel li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}
+.dom-panel li svg{width:18px;height:18px;color:var(--accent-ink);flex:none;margin-top:3px}
+.booking{display:grid;grid-template-columns:1fr 1.2fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--card)}
+.booking .side{background:var(--accent);color:var(--on-accent);padding:36px}
+.booking .side h3{font-size:28px}
+.booking .side p{opacity:.8;margin:10px 0 24px}
+.types{display:grid;gap:10px}
+.type{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid rgba(255,255,255,.2);border-radius:6px;cursor:pointer;transition:.2s}
+.type.on{background:#f7f5f0;color:var(--ink)}
+.type b{font-size:15px}.type span{font-size:13px;opacity:.75}
+.booking .main{padding:36px}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:18px}
+.day{border:1px solid var(--line-strong);border-radius:6px;padding:10px 4px;text-align:center;cursor:pointer;font-size:13px}
+.day b{display:block;font-size:18px;font-family:var(--display)}
+.day.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px}
+.slot{padding:9px;border:1px solid var(--line-strong);border-radius:6px;text-align:center;cursor:pointer;font-size:14px;background:none}
+.slot.on{background:var(--soft);border-color:var(--accent-ink);font-weight:600}
+.slot:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.secure{display:flex;gap:10px;align-items:center;padding:12px 14px;background:var(--soft);border-radius:6px;font-size:13px;margin-bottom:18px}
+.secure svg{width:18px;height:18px;color:var(--accent-ink);flex:none}
+.fees .card{text-align:left}
+.fees .price{font-family:var(--display);font-size:38px;margin:10px 0 4px}
+.steps{counter-reset:s}
+.steps .card{position:relative;padding-top:56px}
+.steps .card::before{counter-increment:s;content:"0" counter(s);position:absolute;top:22px;left:28px;font-family:var(--display);font-size:24px;color:var(--accent-ink)}
+@media (max-width:760px){.booking,.dom-panel.on{grid-template-columns:1fr}.slots{grid-template-columns:repeat(3,1fr)}.booking .side,.booking .main{padding:24px}.days{grid-template-columns:repeat(5,1fr);gap:5px}.visual .monogram{font-size:80px;top:30px;right:30px}}
+</style></head>
+<body>
+<div class="demo"><a href="./" style="text-decoration:underline">← Toutes les maquettes</a> · Maquette de démonstration, contenus fictifs · réalisée par <a href="../" style="text-decoration:underline">Einat Guedj</a></div>
+
+<header class="nav"><div class="wrap">
+ <a href="#" class="logo">Cabinet Valmont<small>Avocat au Barreau</small></a>
+ <nav class="links"><a href="#domaines">Domaines</a><a href="#honoraires">Honoraires</a><a href="#cabinet">Le cabinet</a><a href="#faq">Questions</a><a href="#contact">Contact</a></nav>
+ <a href="#rdv" class="btn sm">Prendre rendez-vous</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <div>
+  <span class="eyebrow">Conseil · Contentieux · Médiation</span>
+  <h1>Défendre vos intérêts, <em>clairement</em> et sans détour.</h1>
+  <p class="lead">Un cabinet à taille humaine qui vous explique vos options, chiffre ses honoraires à l'avance et vous répond sous 24 h ouvrées.</p>
+  <div class="ctas"><a href="#rdv" class="btn">Réserver une consultation</a><a href="#contact" class="btn ghost">Exposer ma situation</a></div>
+  <div class="trust"><div><b>15 ans</b>d'exercice</div><div><b>24 h</b>délai de réponse</div><div><b>Visio</b>partout en France</div></div>
+ </div>
+ <div class="visual"><div class="monogram">V</div><p class="quote">« Un bon conseil évite souvent un long procès. »</p><p class="sig">Maître Valmont</p></div>
+</div></section>
+
+<section class="alt" id="domaines"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Domaines d'intervention</span><h2>Votre situation, notre expertise</h2></div><p>Choisissez votre domaine pour voir les cas que nous traitons le plus souvent.</p></div>
+ <div class="dom-tabs"><button class="on" data-t="famille">Droit de la famille</button><button class="" data-t="travail">Droit du travail</button><button class="" data-t="affaires">Droit des affaires</button><button class="" data-t="immo">Immobilier</button></div>
+ <div class="dom-panel on" id="p-famille"><div><h3 style="font-size:30px">Droit de la famille</h3><p class="lead" style="margin:12px 0 24px">Divorce, garde, pension : un accompagnement humain et ferme, avec une priorité donnée aux solutions amiables.</p><a href="#rdv" class="btn sm" data-dom="Droit de la famille">Prendre rendez-vous pour ce sujet</a></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Divorce amiable et contentieux</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Résidence des enfants, pension alimentaire</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Médiation et procédure participative</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Succession et donation</span></li></ul></div><div class="dom-panel " id="p-travail"><div><h3 style="font-size:30px">Droit du travail</h3><p class="lead" style="margin:12px 0 24px">Salariés comme employeurs : sécuriser une rupture, contester un licenciement, négocier une sortie.</p><a href="#rdv" class="btn sm" data-dom="Droit du travail">Prendre rendez-vous pour ce sujet</a></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Licenciement, rupture conventionnelle</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Harcèlement, discrimination</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Prud'hommes</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Audit social pour TPE et PME</span></li></ul></div><div class="dom-panel " id="p-affaires"><div><h3 style="font-size:30px">Droit des affaires</h3><p class="lead" style="margin:12px 0 24px">Créer, développer, protéger : un conseil juridique concret pour dirigeants et entrepreneurs.</p><a href="#rdv" class="btn sm" data-dom="Droit des affaires">Prendre rendez-vous pour ce sujet</a></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Création et statuts de société</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Contrats commerciaux, CGV</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Recouvrement de créances</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Baux commerciaux</span></li></ul></div><div class="dom-panel " id="p-immo"><div><h3 style="font-size:30px">Immobilier</h3><p class="lead" style="margin:12px 0 24px">Achat, location, copropriété : prévenir les litiges avant qu'ils ne coûtent cher.</p><a href="#rdv" class="btn sm" data-dom="Immobilier">Prendre rendez-vous pour ce sujet</a></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Litiges locatifs, impayés</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Vices cachés, malfaçons</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Copropriété</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg><span>Accompagnement à l'achat</span></li></ul></div>
+</div></section>
+
+<section id="rdv"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Prise de rendez-vous en ligne</span><h2>Une consultation, en 3 clics</h2></div><p>Au cabinet, en visio ou par téléphone. Le créneau est confirmé immédiatement par e-mail.</p></div>
+ <div class="booking">
+  <div class="side">
+   <h3>Type de consultation</h3><p>Le tarif est connu avant de réserver.</p>
+   <div class="types">
+    <div class="type on" data-p="120 €"><div><b>Au cabinet</b><br><span>45 min</span></div><b>120 €</b></div>
+    <div class="type" data-p="100 €"><div><b>Visioconférence</b><br><span>45 min</span></div><b>100 €</b></div>
+    <div class="type" data-p="60 €"><div><b>Appel découverte</b><br><span>20 min</span></div><b>60 €</b></div>
+   </div>
+  </div>
+  <div class="main">
+   <label>Choisissez un jour</label>
+   <div class="days" id="days"></div>
+   <label>Créneaux disponibles</label>
+   <div class="slots" id="slots"></div>
+   <div class="field"><label>Domaine concerné</label><select id="domSel"><option>Droit de la famille</option><option>Droit du travail</option><option>Droit des affaires</option><option>Immobilier</option><option>Autre / je ne sais pas</option></select></div>
+   <button class="btn" style="width:100%" id="bookBtn">Confirmer le rendez-vous</button>
+   <div class="ok" id="bookOk"></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="alt" id="honoraires"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Honoraires transparents</span><h2>Pas de mauvaise surprise</h2></div><p>Une convention d'honoraires est signée avant toute intervention. Vous savez ce que vous payez, et pourquoi.</p></div>
+ <div class="grid g3 fees">
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Au temps passé</h3><div class="price">180 €<small style="font-size:16px"> HT/h</small></div><p>Pour le conseil ponctuel et la rédaction d'actes.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><h3>Au forfait</h3><div class="price">dès 900 €</div><p>Divorce amiable, rupture conventionnelle, statuts de société.</p></div>
+  <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Abonnement entreprise</h3><div class="price">250 €<small style="font-size:16px"> HT/mois</small></div><p>Une ligne directe pour vos questions juridiques du quotidien.</p></div>
+ </div>
+</div></section>
+
+<section id="cabinet"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow">Comment ça se passe</span><h2>Un accompagnement en 4 étapes</h2></div></div>
+ <div class="grid g4 steps">
+  <div class="card"><h3>Premier échange</h3><p>Vous exposez votre situation, en toute confidentialité.</p></div>
+  <div class="card"><h3>Analyse</h3><p>Vos options, les risques et un chiffrage clair.</p></div>
+  <div class="card"><h3>Stratégie</h3><p>Négociation, médiation ou procédure : vous décidez.</p></div>
+  <div class="card"><h3>Suivi</h3><p>Un espace client pour suivre votre dossier et vos documents.</p></div>
+ </div>
+</div></section>
+
+<section class="alt" id="contact"><div class="wrap">
+ <div class="grid g2" style="gap:56px;align-items:start">
+  <div>
+   <span class="eyebrow">Contact confidentiel</span><h2>Exposez votre situation</h2>
+   <p class="lead" style="margin-bottom:24px">Vos informations sont couvertes par le secret professionnel et ne sont lues que par l'avocat.</p>
+   <div class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Formulaire chiffré · Données hébergées en France · Supprimées sous 90 jours sans suite</span></div>
+   <div class="faq" id="faq">
+    <details><summary>La première consultation est-elle payante ?</summary><p>Oui, elle est facturée selon le format choisi. L'appel découverte permet de savoir rapidement si nous pouvons vous aider.</p></details>
+    <details><summary>Acceptez-vous l'aide juridictionnelle ?</summary><p>Oui, sous conditions de ressources. Indiquez-le dans le formulaire.</p></details>
+    <details><summary>Intervenez-vous hors de votre ville ?</summary><p>Oui, en visio pour le conseil, et devant toutes les juridictions de France.</p></details>
+   </div>
+  </div>
+  <form class="card" data-ok="cOk">
+   <div class="row2"><div class="field"><label>Nom</label><input type="text" required></div><div class="field"><label>Téléphone</label><input type="tel"></div></div>
+   <div class="field"><label>E-mail</label><input type="email" required></div>
+   <div class="row2"><div class="field"><label>Vous êtes</label><select><option>Particulier</option><option>Entreprise</option></select></div><div class="field"><label>Urgence</label><select><option>Pas urgent</option><option>Sous 15 jours</option><option>Audience / délai imminent</option></select></div></div>
+   <div class="field"><label>Votre situation en quelques lignes</label><textarea placeholder="Les faits, les dates importantes, ce que vous souhaitez obtenir…"></textarea></div>
+   <div class="field"><label>Pièces jointes (facultatif)</label><input type="file" multiple style="font-size:14px"></div>
+   <label style="display:flex;gap:10px;font-weight:400;align-items:flex-start"><input type="checkbox" required style="margin-top:4px"> J'accepte que mes données soient traitées pour répondre à ma demande.</label>
+   <button class="btn" style="width:100%;margin-top:14px">Envoyer en toute confidentialité</button>
+   <div class="ok" id="cOk">Merci, votre message a bien été transmis. Réponse sous 24 h ouvrées.</div>
+  </form>
+ </div>
+</div></section>
+
+<footer><div class="wrap"><span>Cabinet Valmont · Avocat au Barreau · Adresse fictive</span><span>Mentions légales · Politique de confidentialité</span></div></footer>
+
+<script>
+document.querySelectorAll('.g3,.g4,.pf').forEach(g=>{const h=document.createElement('p');h.className='swipe-hint';h.textContent='Faites glisser →';g.before(h)});
+document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('nav.links').classList.toggle('open'));
+document.querySelectorAll('nav.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav.links').classList.remove('open')));
+document.querySelectorAll('form[data-ok]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const o=document.getElementById(f.dataset.ok);o.classList.add('show');f.reset&&0;}));
+
+document.querySelectorAll('.dom-tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.dom-tabs button,.dom-panel').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('p-'+b.dataset.t).classList.add('on')});
+document.querySelectorAll('[data-dom]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('domSel').value=a.dataset.dom}));
+document.querySelectorAll('.type').forEach(t=>t.onclick=()=>{document.querySelectorAll('.type').forEach(x=>x.classList.remove('on'));t.classList.add('on')});
+const J=['Lun','Mar','Mer','Jeu','Ven'],days=document.getElementById('days'),slots=document.getElementById('slots');
+let d0=new Date();d0.setDate(d0.getDate()+1);let list=[];while(list.length<5){if(d0.getDay()>0&&d0.getDay()<6)list.push(new Date(d0));d0.setDate(d0.getDate()+1)}
+let sel={d:0,s:null};
+const H=['09:00','10:00','11:00','14:00','15:00','16:00','17:00','18:00'];
+function draw(){days.innerHTML=list.map((d,k)=>`<div class="day ${k==sel.d?'on':''}" data-k="${k}">${J[d.getDay()-1]}<b>${d.getDate()}</b></div>`).join('');
+slots.innerHTML=H.map((h,k)=>`<button class="slot ${sel.s==h?'on':''}" ${((k+sel.d)%3==0)?'disabled':''} data-h="${h}">${h}</button>`).join('');
+days.querySelectorAll('.day').forEach(x=>x.onclick=()=>{sel.d=+x.dataset.k;sel.s=null;draw()});
+slots.querySelectorAll('.slot').forEach(x=>x.onclick=()=>{sel.s=x.dataset.h;draw()})}
+draw();
+document.getElementById('bookBtn').onclick=()=>{const o=document.getElementById('bookOk');const t=document.querySelector('.type.on b').textContent;
+o.textContent=sel.s?`Rendez-vous confirmé : ${t.toLowerCase()}, le ${list[sel.d].toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})} à ${sel.s}. Un e-mail de confirmation vous a été envoyé.`:'Choisissez un créneau pour continuer.';o.classList.add('show')};
+</script>
+</body></html>
