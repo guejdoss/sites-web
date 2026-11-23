@@ -90,11 +90,30 @@ footer a{text-decoration:none;font-weight:500;color:var(--encre)}
  .phone img{border-radius:12px}
  .ctas .btn{flex:1;justify-content:center}
 }
+/* fond noir */
+body{background:#1b1715;color:#f3ece4}
+.top{background:color-mix(in srgb,#1b1715 90%,transparent);border-bottom-color:#2f2925}
+.logo i::after{background:#1b1715;box-shadow:0 7px 0 #1b1715}
+.lead,.copy p,.copy .num{color:#b3a89e}
+.chips a{background:#26211e;border-color:#3a332e;color:#f3ece4}
+.chips a:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.metier{border-top-color:#2f2925}
+.metier.alt{background:#221d1a}
+.browser{border-color:#3a332e;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.browser .bar{background:#2b2522;border-bottom-color:#3a332e}
+.browser .bar i{background:#4a413b}
+.phone{border-color:#000;background:#000}
+.btn-ink{background:#f3ece4;color:#1b1715;border-color:#f3ece4}
+.btn-line{color:#f3ece4;border-color:#5a4f48}
+.btn-line:hover{border-color:var(--orange);color:var(--orange)}
+.end .box{background:#2b2522;border:1px solid #3a332e}
+footer{border-top-color:#2f2925;color:#9a8f86}
+footer a{color:#f3ece4}
 </style>
 </head>
 <body>
 <header class="top band"><div class="in">
- <nav><a class="logo" href="../"><i aria-hidden="true"></i>Mon site web</a><a class="btn btn-orange sm" href="../">Voir mon site →</a></nav>
+ <nav><a class="logo" href="../"><i aria-hidden="true"></i>Mon site web</a><a class="btn btn-orange sm" href="../#offres">Voir l'offre →</a></nav>
 </div></header>
 
 <main>
@@ -102,7 +121,7 @@ footer a{text-decoration:none;font-weight:500;color:var(--encre)}
  <span class="kick">Maquettes par métier</span>
  <h1>Un site pensé pour <em>votre métier</em>.</h1>
  <p class="lead">Pas une simple vitrine : chaque maquette a les fonctions qui font venir des clients dans ce métier. Rendez-vous, devis en direct, filtres, candidatures. Tout est cliquable, sur ordinateur comme sur téléphone.</p>
- <div class="ctas"><a class="btn btn-ink" href="#avocat">Voir les maquettes</a><a class="btn btn-line" href="../">Mon vrai site →</a></div>
+ <div class="ctas"><a class="btn btn-ink" href="#avocat">Voir les maquettes</a><a class="btn btn-line" href="../#offres">Voir l'offre et les tarifs →</a></div>
  <div class="chips"><a href="#avocat">Avocat</a><a href="#designer">Designer</a><a href="#nettoyage">Nettoyage</a><a href="#traiteur">Traiteur</a><a href="#rh">Cabinet RH</a></div>
 </div></section>
 
@@ -158,10 +177,10 @@ footer a{text-decoration:none;font-weight:500;color:var(--encre)}
 
 <section class="band end"><div class="in"><div class="box">
  <div><h2>Votre métier n'est pas dans la liste ?</h2><p>Je vous prépare une maquette à vos couleurs, avec les fonctions de votre activité. Offerte.</p></div>
- <div class="ctas"><a class="btn btn-orange" href="../#rdv">Prendre rendez-vous</a><a class="btn btn-line" href="../">Voir mon site</a></div>
+ <div class="ctas"><a class="btn btn-orange" href="../#rdv">Prendre rendez-vous</a><a class="btn btn-line" href="../#offres">Voir l'offre</a></div>
 </div></div></section>
 </main>
 
-<footer class="band"><div class="in">Maquettes de démonstration, noms et contenus fictifs · <a href="../">Einat Guedj, Mon site web</a></div></footer>
+<footer class="band"><div class="in">Maquettes de démonstration, noms et contenus fictifs · <a href="../">Einat Guedj, création de sites web</a></div></footer>
 </body>
 </html>
