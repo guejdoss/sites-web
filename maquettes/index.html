@@ -47,7 +47,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px;paddi
 .chips a{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-decoration:none;padding:7px 14px;border-radius:999px;background:var(--chaux-2);border:1px solid var(--trait);transition:.2s}
 .chips a:hover{background:var(--peche);border-color:var(--peche)}
 /* métiers */
-.metier{padding-block:64px;border-top:1px solid var(--trait)}
+.metier{padding-block:clamp(40px,4.5vw,64px);border-top:1px solid var(--trait)}
 .metier .in{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 .metier:nth-of-type(even) .in{grid-template-columns:.85fr 1.15fr}
 .metier:nth-of-type(even) .shot{order:2}
@@ -68,7 +68,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px;paddi
 .feats li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
 .feats li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);margin-top:9px;flex:none}
 /* fin */
-.end{padding-block:72px}
+.end{padding-block:clamp(40px,5vw,64px)}
 .end .box{background:var(--encre);color:var(--chaux);border-radius:28px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.3fr auto;gap:32px;align-items:center}
 .end h2{color:var(--chaux)}
 .end p{color:#cfc6bd;margin-top:12px}
@@ -116,12 +116,12 @@ footer a{color:var(--txt)}
 /* pleine largeur */
 .in{max-width:1560px}
 .band{padding-left:clamp(20px,4vw,64px);padding-right:clamp(20px,4vw,64px)}
-.hero{display:grid;grid-template-columns:1.25fr .75fr;grid-template-areas:"kick kick" "title side" "chips chips";column-gap:clamp(32px,6vw,120px);row-gap:28px;padding-block:clamp(64px,10vw,140px) clamp(56px,7vw,100px);align-items:end}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;grid-template-areas:"kick kick" "title side" "chips chips";column-gap:clamp(32px,6vw,120px);row-gap:20px;padding-block:clamp(40px,5vw,72px) clamp(40px,5vw,64px);align-items:end}
 .hero .kick{grid-area:kick}
-.hero h1{grid-area:title;font-size:clamp(46px,7.6vw,128px);line-height:.98}
+.hero h1{grid-area:title;font-size:clamp(44px,6.4vw,104px);line-height:.98}
 .hero .side{grid-area:side;display:grid;gap:28px;padding-bottom:10px}
 .hero .side .lead{max-width:none;font-size:clamp(17px,1.5vw,22px)}
-.hero .chips{grid-area:chips;margin-top:12px}
+.hero .chips{grid-area:chips;margin-top:4px}
 .metier .in{gap:clamp(40px,6vw,110px)}
 @media (max-width:900px){.hero{grid-template-columns:1fr;grid-template-areas:"kick" "title" "side" "chips"}.hero .side{padding-bottom:0}}
 </style>
@@ -142,7 +142,7 @@ footer a{color:var(--txt)}
  <div class="chips"><a href="#avocat">Avocat</a><a href="#designer">Designer</a><a href="#nettoyage">Nettoyage</a><a href="#traiteur">Traiteur</a><a href="#rh">Cabinet RH</a></div>
 </div></section>
 
-<section class="band metier" id="avocat"><div class="in">
+<section class="band metier alt" id="avocat"><div class="in">
  <a class="shot" href="avocat.html"><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="apercus/avocat-pc.jpg" alt="Maquette avocat sur ordinateur" loading="lazy"></div><div class="phone"><img src="apercus/avocat-tel.jpg" alt="Maquette avocat sur téléphone" loading="lazy"></div></a>
  <div class="copy">
   <span class="num">01 · Cabinet d'avocat</span>
@@ -152,7 +152,7 @@ footer a{color:var(--txt)}
  </div>
 </div></section>
 
-<section class="band metier alt" id="designer"><div class="in">
+<section class="band metier" id="designer"><div class="in">
  <a class="shot" href="designer.html"><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="apercus/designer-pc.jpg" alt="Maquette designer sur ordinateur" loading="lazy"></div><div class="phone"><img src="apercus/designer-tel.jpg" alt="Maquette designer sur téléphone" loading="lazy"></div></a>
  <div class="copy">
   <span class="num">02 · Designer</span>
@@ -162,7 +162,7 @@ footer a{color:var(--txt)}
  </div>
 </div></section>
 
-<section class="band metier" id="nettoyage"><div class="in">
+<section class="band metier alt" id="nettoyage"><div class="in">
  <a class="shot" href="nettoyage.html"><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="apercus/nettoyage-pc.jpg" alt="Maquette société de nettoyage sur ordinateur" loading="lazy"></div><div class="phone"><img src="apercus/nettoyage-tel.jpg" alt="Maquette société de nettoyage sur téléphone" loading="lazy"></div></a>
  <div class="copy">
   <span class="num">03 · Société de nettoyage</span>
@@ -172,7 +172,7 @@ footer a{color:var(--txt)}
  </div>
 </div></section>
 
-<section class="band metier alt" id="traiteur"><div class="in">
+<section class="band metier" id="traiteur"><div class="in">
  <a class="shot" href="traiteur.html"><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="apercus/traiteur-pc.jpg" alt="Maquette traiteur sur ordinateur" loading="lazy"></div><div class="phone"><img src="apercus/traiteur-tel.jpg" alt="Maquette traiteur sur téléphone" loading="lazy"></div></a>
  <div class="copy">
   <span class="num">04 · Traiteur</span>
@@ -182,7 +182,7 @@ footer a{color:var(--txt)}
  </div>
 </div></section>
 
-<section class="band metier" id="rh"><div class="in">
+<section class="band metier alt" id="rh"><div class="in">
  <a class="shot" href="rh.html"><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="apercus/rh-pc.jpg" alt="Maquette cabinet RH sur ordinateur" loading="lazy"></div><div class="phone"><img src="apercus/rh-tel.jpg" alt="Maquette cabinet RH sur téléphone" loading="lazy"></div></a>
  <div class="copy">
   <span class="num">05 · Cabinet RH</span>
