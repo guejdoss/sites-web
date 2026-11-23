@@ -92,24 +92,36 @@ footer a{text-decoration:none;font-weight:500;color:var(--encre)}
  .ctas .btn{flex:1;justify-content:center}
 }
 /* fond noir */
-body{background:#1b1715;color:#f3ece4}
-.top{background:color-mix(in srgb,#1b1715 90%,transparent);border-bottom-color:#2f2925}
-.logo i::after{background:#1b1715;box-shadow:0 7px 0 #1b1715}
-.lead,.copy p,.copy .num{color:#b3a89e}
-.chips a{background:#26211e;border-color:#3a332e;color:#f3ece4}
+:root{--bg:#0c0c0c;--bg2:#141414;--line:#262626;--txt:#f5f2ee;--mut:#a9a39d}
+body{background:var(--bg);color:var(--txt)}
+.top{background:color-mix(in srgb,var(--bg) 92%,transparent);border-bottom-color:var(--line)}
+.logo i::after{background:var(--bg);box-shadow:0 7px 0 var(--bg)}
+.lead,.copy p,.copy .num{color:var(--mut)}
+.chips a{background:var(--bg2);border-color:#333;color:var(--txt)}
 .chips a:hover{background:var(--orange);border-color:var(--orange);color:#fff}
-.metier{border-top-color:#2f2925}
-.metier.alt{background:#221d1a}
-.browser{border-color:#3a332e;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
-.browser .bar{background:#2b2522;border-bottom-color:#3a332e}
-.browser .bar i{background:#4a413b}
+.metier{border-top-color:var(--line)}
+.metier.alt{background:var(--bg2)}
+.browser{border-color:#333;box-shadow:0 30px 70px -30px rgba(0,0,0,.9)}
+.browser .bar{background:#1d1d1d;border-bottom-color:#2c2c2c}
+.browser .bar i{background:#3a3a3a}
 .phone{border-color:#000;background:#000}
-.btn-ink{background:#f3ece4;color:#1b1715;border-color:#f3ece4}
-.btn-line{color:#f3ece4;border-color:#5a4f48}
+.btn-ink{background:var(--txt);color:var(--bg);border-color:var(--txt)}
+.btn-line{color:var(--txt);border-color:#4a4a4a}
 .btn-line:hover{border-color:var(--orange);color:var(--orange)}
-.end .box{background:#2b2522;border:1px solid #3a332e}
-footer{border-top-color:#2f2925;color:#9a8f86}
-footer a{color:#f3ece4}
+.end .box{background:var(--bg2);border:1px solid #2c2c2c}
+footer{border-top-color:var(--line);color:#8d8780}
+footer a{color:var(--txt)}
+/* pleine largeur */
+.in{max-width:1560px}
+.band{padding-left:clamp(20px,4vw,64px);padding-right:clamp(20px,4vw,64px)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;grid-template-areas:"kick kick" "title side" "chips chips";column-gap:clamp(32px,6vw,120px);row-gap:28px;padding-block:clamp(64px,10vw,140px) clamp(56px,7vw,100px);align-items:end}
+.hero .kick{grid-area:kick}
+.hero h1{grid-area:title;font-size:clamp(46px,7.6vw,128px);line-height:.98}
+.hero .side{grid-area:side;display:grid;gap:28px;padding-bottom:10px}
+.hero .side .lead{max-width:none;font-size:clamp(17px,1.5vw,22px)}
+.hero .chips{grid-area:chips;margin-top:12px}
+.metier .in{gap:clamp(40px,6vw,110px)}
+@media (max-width:900px){.hero{grid-template-columns:1fr;grid-template-areas:"kick" "title" "side" "chips"}.hero .side{padding-bottom:0}}
 </style>
 </head>
 <body>
@@ -121,8 +133,10 @@ footer a{color:#f3ece4}
 <section class="band"><div class="in hero">
  <span class="kick">Maquettes par métier</span>
  <h1>Un site pensé pour <em>votre métier</em>.</h1>
- <p class="lead">Pas une simple vitrine : chaque maquette a les fonctions qui font venir des clients dans ce métier. Rendez-vous, devis en direct, filtres, candidatures. Tout est cliquable, sur ordinateur comme sur téléphone.</p>
- <div class="ctas"><a class="btn btn-ink" href="#avocat">Voir les maquettes</a><a class="btn btn-line" href="../#offres">Voir l'offre et les tarifs →</a></div>
+ <div class="side">
+  <p class="lead">Pas une simple vitrine : chaque maquette a les fonctions qui font venir des clients dans ce métier. Rendez-vous, devis en direct, filtres, candidatures. Tout est cliquable, sur ordinateur comme sur téléphone.</p>
+  <div class="ctas"><a class="btn btn-ink" href="#avocat">Voir les maquettes</a><a class="btn btn-line" href="../#offres">Voir l'offre et les tarifs →</a></div>
+ </div>
  <div class="chips"><a href="#avocat">Avocat</a><a href="#designer">Designer</a><a href="#nettoyage">Nettoyage</a><a href="#traiteur">Traiteur</a><a href="#rh">Cabinet RH</a></div>
 </div></section>
 
