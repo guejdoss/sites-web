@@ -117,14 +117,14 @@ footer a{color:var(--txt)}
 /* pleine largeur */
 .in{max-width:1560px}
 .band{padding-left:clamp(20px,4vw,64px);padding-right:clamp(20px,4vw,64px)}
-.hero{display:grid;grid-template-columns:1.25fr .75fr;grid-template-areas:"kick kick" "title side" "chips chips";column-gap:clamp(32px,6vw,120px);row-gap:20px;padding-block:clamp(40px,5vw,72px) clamp(40px,5vw,64px);align-items:end}
+.hero{display:grid;grid-template-columns:auto minmax(0,540px);justify-content:start;grid-template-areas:"kick kick" "title side" "chips chips";column-gap:clamp(32px,3.5vw,64px);row-gap:18px;padding-block:clamp(20px,2.4vw,36px) clamp(32px,4vw,52px);align-items:end}
 .hero .kick{grid-area:kick}
 .hero h1{grid-area:title;font-size:clamp(44px,6.4vw,104px);line-height:.98}
 .hero .side{grid-area:side;display:grid;gap:28px;padding-bottom:10px}
 .hero .side .lead{max-width:none;font-size:clamp(17px,1.5vw,22px)}
 .hero .chips{grid-area:chips;margin-top:4px}
 .metier .in{gap:clamp(40px,6vw,110px)}
-@media (max-width:900px){.hero{grid-template-columns:1fr;grid-template-areas:"kick" "title" "side" "chips"}.hero .side{padding-bottom:0}}
+@media (max-width:900px){.hero h1{max-width:none}.hero{grid-template-columns:1fr;grid-template-areas:"kick" "title" "side" "chips"}.hero .side{padding-bottom:0}}
 </style>
 </head>
 <body>
@@ -135,7 +135,7 @@ footer a{color:var(--txt)}
 <main>
 <section class="band"><div class="in hero">
  <span class="kick">Maquettes par métier</span>
- <h1>Un site pensé pour <em>votre métier</em>.</h1>
+ <h1>Un site pensé<br>pour <em>votre métier</em>.</h1>
  <div class="side">
   <p class="lead">Pas une simple vitrine : chaque maquette a les fonctions qui font venir des clients dans ce métier. Rendez-vous, devis en direct, filtres, candidatures. Tout est cliquable, sur ordinateur comme sur téléphone.</p>
   <div class="ctas"><a class="btn btn-ink" href="#avocat">Voir les maquettes</a><a class="btn btn-line" href="../#offres">Voir l'offre et les tarifs →</a></div>
