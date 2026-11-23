@@ -37,8 +37,9 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px;paddi
 .logo i{width:26px;height:30px;border-radius:13px 13px 0 0;background:var(--orange);display:block;position:relative;overflow:hidden}
 .logo i::after{content:"";position:absolute;left:0;right:0;top:58%;height:3px;background:var(--chaux);box-shadow:0 7px 0 var(--chaux)}
 /* héros */
-.hero{padding-block:64px 56px;display:grid;gap:26px;max-width:860px}
-.hero h1{font-size:clamp(42px,6.4vw,84px)}
+.hero{padding-block:88px 80px;display:grid;gap:32px}
+.hero .lead{max-width:760px}
+.hero h1{font-size:clamp(44px,7.4vw,104px);max-width:none}
 .hero h1 em{font-style:normal;color:var(--orange)}
 .lead{font-size:clamp(17px,1.6vw,20px);color:var(--gris);max-width:none}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
@@ -83,7 +84,7 @@ footer a{text-decoration:none;font-weight:500;color:var(--encre)}
  .end .ctas{justify-content:flex-start}
 }
 @media (max-width:560px){
- .hero{padding-block:40px 36px}
+ .hero{padding-block:48px 48px;gap:26px}
  .metier{padding-block:48px}
  nav .btn{padding:9px 14px;font-size:14px}
  .phone{border-width:4px;border-radius:16px}
